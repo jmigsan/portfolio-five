@@ -1,0 +1,45 @@
+.heading1 {
+    font-size: 3rem;
+    font-family: var(--font-nacelle-black);
+    margin-top: 5px;
+}
+
+.heading2 {
+    font-size: 1.5rem;
+    font-family: var(--font-nacelle-black);
+    margin-top: 22px;
+}
+
+.paragraph {
+    margin-top: 10px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-family: var(--font-nacelle-black);
+    margin-bottom: 0.75rem;
+}
+
+.cardText {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}

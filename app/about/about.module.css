@@ -1,0 +1,15 @@
+.heading1 {
+    font-size: 3rem;
+    font-family: var(--font-nacelle-black);
+    margin-top: 5px;
+}
+
+.heading2 {
+    font-size: 1.5rem;
+    font-family: var(--font-nacelle-black);
+    margin-top: 22px;
+}
+
+.paragraph {
+    margin-top: 10px;
+}

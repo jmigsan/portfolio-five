@@ -1,0 +1,26 @@
+/* LinkWrapper Styles */
+.link-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.link-circle {
+  opacity: 0;
+  transition: opacity 0.3s 0.2s, stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-wrapper:hover .link-circle {
+  stroke-dashoffset: 0 !important;
+  opacity: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-circle {
+    transition: none;
+  }
+  
+  .link-wrapper:hover .link-circle {
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+  }
+}
