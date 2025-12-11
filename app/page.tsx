@@ -12,7 +12,7 @@ const Home = () => {
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <div className='flex-1 flex flex-col p-16 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
+        <div className='flex-1 flex flex-col p-12 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
             <video
                 autoPlay
                 loop
