@@ -10,6 +10,7 @@
     --color-foreground: var(--foreground);
     --font-lora: var(--font-lora);
     --font-nacelle-black: var(--font-nacelle-black);
+    --font-edu-sa: var(--font-edu-sa);
 }
 
 @media (prefers-color-scheme: dark) {

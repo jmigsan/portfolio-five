@@ -132,8 +132,8 @@ const Contact = () => {
 
                             {/* Signature area */}
                             <div className='mt-8 flex justify-end'>
-                                <div className='font-handwriting text-2xl -rotate-12 opacity-80 font-lora italic'>
-                                    Juan Miguel
+                                <div className='font-edu-sa text-3xl -rotate-12 opacity-80 italic'>
+                                    Miguel
                                 </div>
                             </div>
                         </div>
