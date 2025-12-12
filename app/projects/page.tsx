@@ -135,7 +135,7 @@ const Projects = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className='text-xl text-gray-500 dark:text-gray-400 italic mt-10 md:mt-50 hidden md:block'>
+                        <div className='text-xl text-gray-500 dark:text-gray-400 mt-10 md:mt-50 hidden md:block'>
                             Click on a project to learn more →
                         </div>
                     )}
