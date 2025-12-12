@@ -92,11 +92,11 @@ const Projects = () => {
             <div className='flex flex-col-reverse md:flex-row h-full md:h-[calc(100vh-100px)] w-full'>
                 <div
                     ref={detailsRef}
-                    className='w-full md:w-1/2 flex-1 flex flex-col items-center text-black px-0 md:px-10 pt-10 md:overflow-y-auto no-scrollbar pb-20'
+                    className='w-full md:w-1/2 flex-1 flex flex-col items-center text-foreground px-0 md:px-10 pt-10 md:overflow-y-auto no-scrollbar pb-20'
                 >
                     {selectedProject ? (
                         <div className='flex flex-col items-center gap-6 animate-in fade-in duration-500 w-full'>
-                            <div className='relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-gray-200 shrink-0'>
+                            <div className='relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700 shrink-0'>
                                 <video
                                     src={selectedProject.video}
                                     autoPlay
@@ -110,7 +110,7 @@ const Projects = () => {
                                 <h3 className='text-2xl font-bold mb-4 font-nacelle-black'>
                                     {selectedProject.title}
                                 </h3>
-                                <div className='flex flex-col gap-4 text-gray-700 text-lg text-left'>
+                                <div className='flex flex-col gap-4 text-gray-700 dark:text-gray-300 text-lg text-left'>
                                     {selectedProject.description.map(
                                         (paragraph, index) => (
                                             <p key={index}>{paragraph}</p>
@@ -125,7 +125,7 @@ const Projects = () => {
                                                 href={link.url}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className='px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm font-bold'
+                                                className='px-6 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors text-sm font-bold'
                                             >
                                                 {link.label} ↗
                                             </a>
@@ -135,7 +135,7 @@ const Projects = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className='text-xl text-gray-500 italic mt-10 md:mt-50 hidden md:block'>
+                        <div className='text-xl text-gray-500 dark:text-gray-400 italic mt-10 md:mt-50 hidden md:block'>
                             Click on a project to learn more →
                         </div>
                     )}
@@ -152,7 +152,7 @@ const Projects = () => {
                                 key={project.id}
                                 className={`${styles.card} ${
                                     selectedProject?.id === project.id
-                                        ? "border-gray-400 bg-white shadow-lg transform -translate-y-[2px]"
+                                        ? "border-gray-400 dark:border-gray-500 bg-white dark:bg-gray-800 shadow-lg transform -translate-y-[2px]"
                                         : ""
                                 }`}
                                 onClick={() => setSelectedProject(project)}
