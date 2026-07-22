@@ -9,7 +9,7 @@ const projects = [
     {
         id: 1,
         title: "HymnDeck",
-        tech: "TypeScript, Next.js, Tailwind, Python, FastAPI, PostgreSQL, Firebase, Lemon Squeezy, OpenRouter, Google CLoud Platform",
+        tech: "TypeScript, Next.js, Tailwind, Python, FastAPI, PostgreSQL, Firebase, Lemon Squeezy, OpenRouter, Google Cloud Platform",
         video: "/hymndeck-demo.mp4",
         description: [
             "Solo-shipped a workflow automation SaaS.",
