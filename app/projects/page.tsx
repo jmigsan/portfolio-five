@@ -8,6 +8,27 @@ import { useState, useRef, useEffect } from "react";
 const projects = [
     {
         id: 1,
+        title: "HymnDeck",
+        tech: "TypeScript, Next.js, Tailwind, Python, FastAPI, PostgreSQL, Firebase, Lemon Squeezy, OpenRouter, Google CLoud Platform",
+        video: "/hymndeck-demo.mp4",
+        description: [
+            "Solo-shipped a workflow automation SaaS.",
+			"Automates weekly PowerPoint church slide creation from 2 hours to 15 mins.",
+			"Iteratively developed with requirements gathering from churches.",
+			"Optimised for low costs, fast cold starts, and scalable infrastructure.",
+			"Turborepo (Next.js + FastAPI) with one-command local stack, and a 4-stage Docker build using uv.",
+			"Implemented concurrent LLM agents, agent retrying, and fallbacks.",
+			"Owned architecture, scoping, and code review end -to-end; used agentic AI coding tools and git worktrees to accelerate development.",
+        ],
+        links: [
+            {
+                label: "Live Website",
+                url: "https://hymndeck.app/",
+            },
+        ],
+    },
+	{
+        id: 2,
         title: "House MD Chatbot",
         tech: "TypeScript, Next.js, Tailwind, Python, FastAPI, Google Gen AI, Unsloth, RunPod, Pinecone",
         video: "/house-demo.mp4",
@@ -34,7 +55,7 @@ const projects = [
         ],
     },
     {
-        id: 2,
+        id: 3,
         title: "PowerPoint Automation Tool",
         tech: "Python, python-pptx, Tkinter",
         video: "/ppt-demo.mp4",
@@ -51,7 +72,7 @@ const projects = [
         ],
     },
     {
-        id: 3,
+        id: 4,
         title: "Virtual Reality Language Learning App",
         tech: "C#, Unity, Google Gen AI, LangGraph, FastAPI, Python",
         video: "/vr-demo.mp4",
