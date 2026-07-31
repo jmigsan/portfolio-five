@@ -38,14 +38,6 @@
     text-transform: uppercase;
 }
 
-.eyebrow::before,
-.sectionLabel::before {
-    width: 1.5rem;
-    height: 1px;
-    background: var(--accent);
-    content: "";
-}
-
 .hero h1 {
     max-width: 10ch;
     margin: 1.25rem 0 1.5rem;
