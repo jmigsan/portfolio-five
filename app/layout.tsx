@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Lora, Edu_SA_Beginner } from "next/font/google";
 import "./globals.css";
-import TransitionWrapper from "./components/TransitionWrapper";
+import RouteViewTransition from "./components/RouteViewTransition";
 
 const nacelleBlack = localFont({
     src: "./assets/Nacelle-Black.otf",
@@ -34,7 +34,7 @@ export default function RootLayout({
             <body
                 className={`${nacelleBlack.variable} ${lora.variable} ${eduSA.variable} antialiased h-[100dvh] flex flex-col overflow-hidden`}
             >
-                <TransitionWrapper>{children}</TransitionWrapper>
+                <RouteViewTransition>{children}</RouteViewTransition>
             </body>
         </html>
     );

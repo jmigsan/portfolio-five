@@ -1,10 +1,24 @@
+import type { Metadata } from "next";
+import ProjectNavigation from "./_components/ProjectNavigation";
+import styles from "./projects.module.css";
+
+export const metadata: Metadata = {
+    title: {
+        default: "Projects | Juan Miguel Sanchez",
+        template: "%s | Juan Miguel Sanchez",
+    },
+    description:
+        "Product engineering case studies by Juan Miguel Sanchez, from problem discovery to production deployment.",
+};
+
 export default function ProjectsLayout({
     children,
-}: {
+}: Readonly<{
     children: React.ReactNode;
-}) {
+}>) {
     return (
-        <div className='h-screen overflow-y-auto overflow-x-hidden'>
+        <div className={styles.projectsViewport}>
+            <ProjectNavigation />
             {children}
         </div>
     );

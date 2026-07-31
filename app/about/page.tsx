@@ -1,5 +1,5 @@
-import Link from "next/link";
 import styles from "./about.module.css";
+import DirectionalLink from "../components/DirectionalLink";
 import LinkWrapper from "../components/LinkWrapper";
 import Image from "next/image";
 import polaroid1 from "../assets/polaroid-1.jpg";
@@ -12,7 +12,7 @@ const About = () => {
         <div className='flex-col font-lora p-10 overflow-hidden'>
             <div className='flex justify-end -mt-4 mb-3 md:mt-0 md:mb-0'>
                 <LinkWrapper>
-                    <Link href='/'>Back to Home →</Link>
+                    <DirectionalLink href='/'>Back to Home →</DirectionalLink>
                 </LinkWrapper>
             </div>
             <div className='flex md:flex-row flex-col-reverse'>

@@ -25,3 +25,104 @@ body {
     color: var(--foreground);
     font-family: var(--font-lora);
 }
+
+::view-transition-old(.route-slide-left) {
+    animation: route-slide-out-left 500ms ease-in-out both;
+}
+
+::view-transition-new(.route-slide-left) {
+    animation: route-slide-in-right 500ms ease-in-out both;
+}
+
+::view-transition-old(.route-slide-right) {
+    animation: route-slide-out-right 500ms ease-in-out both;
+}
+
+::view-transition-new(.route-slide-right) {
+    animation: route-slide-in-left 500ms ease-in-out both;
+}
+
+::view-transition-old(.route-slide-up) {
+    animation: route-slide-out-up 500ms ease-in-out both;
+}
+
+::view-transition-new(.route-slide-up) {
+    animation: route-slide-in-bottom 500ms ease-in-out both;
+}
+
+::view-transition-old(.route-slide-down) {
+    animation: route-slide-out-down 500ms ease-in-out both;
+}
+
+::view-transition-new(.route-slide-down) {
+    animation: route-slide-in-top 500ms ease-in-out both;
+}
+
+::view-transition-old(.route-fade),
+::view-transition-new(.route-fade) {
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes route-slide-out-left {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes route-slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes route-slide-out-right {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes route-slide-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes route-slide-out-up {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes route-slide-in-bottom {
+    from {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes route-slide-out-down {
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes route-slide-in-top {
+    from {
+        transform: translateY(-100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(.route-slide-left),
+    ::view-transition-new(.route-slide-left),
+    ::view-transition-old(.route-slide-right),
+    ::view-transition-new(.route-slide-right),
+    ::view-transition-old(.route-slide-up),
+    ::view-transition-new(.route-slide-up),
+    ::view-transition-old(.route-slide-down),
+    ::view-transition-new(.route-slide-down),
+    ::view-transition-old(.route-fade),
+    ::view-transition-new(.route-fade) {
+        animation-duration: 0.01ms;
+    }
+}

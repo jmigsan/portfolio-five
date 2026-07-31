@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import AttributionModal from "./components/AttributionModal";
+import DirectionalLink from "./components/DirectionalLink";
 import LinkWrapper from "./components/LinkWrapper";
 
 const Home = () => {
@@ -24,14 +24,20 @@ const Home = () => {
             </video>
             <div className='flex justify-between text-xl sm:text-2xl'>
                 <LinkWrapper>
-                    <Link href='/about' className='font-lora font-medium'>
+                    <DirectionalLink
+                        href='/about'
+                        className='font-lora font-medium'
+                    >
                         About Me
-                    </Link>
+                    </DirectionalLink>
                 </LinkWrapper>
                 <LinkWrapper>
-                    <Link href='/projects' className='font-lora font-medium'>
+                    <DirectionalLink
+                        href='/projects/hymndeck'
+                        className='font-lora font-medium'
+                    >
                         Projects
-                    </Link>
+                    </DirectionalLink>
                 </LinkWrapper>
             </div>
             <div className='flex flex-col items-center sm:gap-7 gap-5'>
@@ -46,9 +52,12 @@ const Home = () => {
             </div>
             <div className='flex justify-between text-xl md:text-2xl'>
                 <LinkWrapper>
-                    <Link href='/contact' className='font-lora font-medium'>
+                    <DirectionalLink
+                        href='/contact'
+                        className='font-lora font-medium'
+                    >
                         Contact Me
-                    </Link>
+                    </DirectionalLink>
                 </LinkWrapper>
                 <LinkWrapper>
                     <button

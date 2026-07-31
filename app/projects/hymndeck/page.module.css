@@ -1,0 +1,86 @@
+.page {
+    --accent: #315bd6;
+    background:
+        radial-gradient(circle at 85% 9%, rgba(49, 91, 214, 0.13), transparent 25rem),
+        var(--paper);
+}
+
+.productMap {
+    width: min(calc(100% - 2rem), 62rem);
+    margin: clamp(4rem, 10vw, 8rem) auto;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid color-mix(in srgb, var(--accent) 38%, var(--hairline));
+    border-radius: 1.25rem;
+    background: color-mix(in srgb, var(--accent) 8%, var(--paper));
+    box-shadow: 0 1.5rem 4rem rgba(23, 23, 25, 0.08);
+}
+
+.mapLabel {
+    margin: 0 0 1.5rem;
+    color: var(--muted);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.mapSteps {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: clamp(0.7rem, 2vw, 1.5rem);
+}
+
+.mapSteps > div {
+    min-height: 10rem;
+    padding: 1.25rem;
+    border: 1px solid var(--hairline);
+    border-radius: 0.8rem;
+    background: var(--paper);
+}
+
+.mapSteps span {
+    color: var(--accent);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.mapSteps strong {
+    display: block;
+    margin: 1.3rem 0 0.45rem;
+    font-family: var(--font-nacelle-black);
+    font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+}
+
+.mapSteps p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.mapSteps .arrow {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 700px) {
+    .productMap {
+        width: calc(100% - 0.75rem);
+        border-radius: 0.75rem;
+    }
+
+    .mapSteps {
+        grid-template-columns: 1fr;
+    }
+
+    .mapSteps > div {
+        min-height: 0;
+    }
+
+    .mapSteps .arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+}

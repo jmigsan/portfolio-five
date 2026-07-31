@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import DirectionalLink from "../components/DirectionalLink";
 import LinkWrapper from "../components/LinkWrapper"; // Assuming this path is correct based on previous file content
 import Image from "next/image";
 import profilePic from "../assets/professional-me.jpg"; // Importing the image directly
@@ -12,7 +12,7 @@ const Contact = () => {
 
             <div className='absolute top-7 left-7 md:top-10 md:left-10 z-50'>
                 <LinkWrapper>
-                    <Link href='/'>Back to Home ↑</Link>
+                    <DirectionalLink href='/'>Back to Home ↑</DirectionalLink>
                 </LinkWrapper>
             </div>
 
