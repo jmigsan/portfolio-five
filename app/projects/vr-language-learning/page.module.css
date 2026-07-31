@@ -1,6 +1,4 @@
 .page {
     --accent: #7250a8;
-    background:
-        radial-gradient(circle at 15% 12%, rgba(114, 80, 168, 0.15), transparent 26rem),
-        var(--paper);
+    background: var(--paper);
 }

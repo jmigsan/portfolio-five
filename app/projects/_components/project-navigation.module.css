@@ -7,30 +7,8 @@
     align-items: center;
     gap: 1rem;
     padding: 0.65rem clamp(0.85rem, 2.5vw, 2rem);
-    border-bottom: 1px solid var(--hairline);
     background: color-mix(in srgb, var(--paper) 88%, transparent);
     backdrop-filter: blur(14px) saturate(1.1);
-}
-
-.back {
-    display: inline-flex;
-    flex: 0 0 auto;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.55rem 0.65rem;
-    border-radius: 0.5rem;
-    color: var(--ink);
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: background-color 180ms ease;
-}
-
-.back:hover,
-.back:focus-visible {
-    background: color-mix(in srgb, var(--ink) 8%, transparent);
 }
 
 .rail {
@@ -49,10 +27,12 @@
 
 .projectLink {
     --project-accent: #315bd6;
+    --project-width: clamp(4.4rem, 9vw, 6.6rem);
+    --project-hover-width: clamp(6.5rem, 12vw, 8.5rem);
     position: relative;
     display: grid;
     flex: 0 0 auto;
-    width: clamp(4.4rem, 9vw, 6.6rem);
+    width: var(--project-width);
     height: 2.7rem;
     overflow: hidden;
     border: 1px solid var(--hairline);
@@ -67,8 +47,13 @@
 
 .projectLink:hover,
 .projectLink:focus-visible {
-    width: clamp(6.5rem, 12vw, 8.5rem);
+    width: var(--project-hover-width);
     transform: translateY(-1px);
+}
+
+.projectLink.active:hover,
+.projectLink.active:focus-visible {
+    transform: none;
 }
 
 .projectLink:focus-visible {
@@ -79,18 +64,35 @@
 .tile {
     position: absolute;
     inset: 0;
-    z-index: -1;
-    background:
-        linear-gradient(135deg, transparent 25%, rgba(255, 255, 255, 0.22)),
-        radial-gradient(circle at 76% 20%, rgba(255, 255, 255, 0.5), transparent 38%),
-        var(--project-accent);
+    z-index: 0;
+    background: var(--project-accent);
+}
+
+.tile::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.28) 0%,
+        rgba(0, 0, 0, 0.62) 100%
+    );
+    content: "";
+}
+
+.preview {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
 
 .projectName {
+    position: relative;
+    z-index: 1;
     display: grid;
     place-items: center;
     padding: 0.25rem;
-    background: rgba(10, 10, 12, 0.62);
     color: white;
     font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
     font-size: 0.58rem;
@@ -98,18 +100,12 @@
     letter-spacing: 0.08em;
     line-height: 1.1;
     text-align: center;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
     text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 180ms ease;
-}
-
-.projectLink:hover .projectName,
-.projectLink:focus-visible .projectName,
-.active .projectName {
-    opacity: 1;
 }
 
 .active {
+    --project-hover-width: var(--project-width);
     box-shadow:
         0 0 0 2px var(--paper),
         0 0 0 4px var(--project-accent);
@@ -122,14 +118,10 @@
         padding-inline: 0.45rem;
     }
 
-    .back {
-        padding-inline: 0.45rem;
-        font-size: 0.62rem;
-    }
-
     .projectLink,
     .projectLink:hover,
     .projectLink:focus-visible {
+        --project-width: 3.5rem;
         width: 3.5rem;
         height: 2.35rem;
         transform: none;
@@ -141,9 +133,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .back,
-    .projectLink,
-    .projectName {
+    .projectLink {
         transition: none;
     }
 }
