@@ -10,7 +10,7 @@ import * as motion from "framer-motion/client";
 const About = () => {
     return (
         <div className='flex-col font-lora p-10 overflow-hidden'>
-            <div className='flex justify-end -mt-4 mb-3 md:mt-0 md:mb-0'>
+            <div className='flex justify-end -mt-4 mb-3 md:mb-0'>
                 <LinkWrapper>
                     <DirectionalLink href='/'>Back to Home →</DirectionalLink>
                 </LinkWrapper>
