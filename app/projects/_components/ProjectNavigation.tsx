@@ -11,21 +11,21 @@ const projects = [
         href: "/projects/hymndeck",
         shortLabel: "HymnDeck",
         label: "HymnDeck case study",
-        accent: "#315bd6",
+        accent: "#d4a017",
         videoSrc: "/hymndeck-demo.mp4",
     },
     {
         href: "/projects/house-md-chatbot",
         shortLabel: "House MD",
         label: "House MD Chatbot case study",
-        accent: "#b1492f",
+        accent: "#173b6c",
         videoSrc: "/house-demo.mp4",
     },
     {
         href: "/projects/powerpoint-automation",
         shortLabel: "PPT Tool",
         label: "PowerPoint Automation Tool case study",
-        accent: "#28735b",
+        accent: "#159a9c",
         videoSrc: "/ppt-demo.mp4",
     },
     {
@@ -48,7 +48,7 @@ export default function ProjectNavigation() {
             <header className={styles.header}>
             <LinkWrapper>
                 <DirectionalLink href='/'>
-                    Back to Home <span aria-hidden='true'>→</span>
+                    <span aria-hidden='true'>←</span> Back to Home
                 </DirectionalLink>
             </LinkWrapper>
 
