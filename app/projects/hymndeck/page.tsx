@@ -65,7 +65,8 @@ export default function HymnDeckCaseStudy() {
                             Case study · Product engineering
                         </p>
                         <span className={styles.liveBadge}>
-                            <span /> Live in production
+                            <span className={styles.liveDot} aria-hidden='true' />
+                            <span className={styles.liveLabel}>Live in production</span>
                         </span>
                     </div>
                     <h1>HymnDeck</h1>
@@ -106,6 +107,7 @@ export default function HymnDeckCaseStudy() {
 
             <MediaFrame
                 wide
+                className={styles.introMedia}
                 caption='From a plain-language request to an editable, downloadable PowerPoint deck.'
             >
                 <video controls muted playsInline preload='metadata'>

@@ -5,14 +5,18 @@ import styles from "./case-study.module.css";
 export function MediaFrame({
     children,
     caption,
+    className,
     wide = false,
 }: {
     children: ReactNode;
     caption?: ReactNode;
+    className?: string;
     wide?: boolean;
 }) {
     return (
-        <figure className={`${styles.mediaFrame} ${wide ? styles.wide : ""}`}>
+        <figure
+            className={`${styles.mediaFrame} ${wide ? styles.wide : ""} ${className ?? ""}`}
+        >
             <div className={styles.mediaSurface}>{children}</div>
             {caption ? (
                 <figcaption className={styles.caption}>{caption}</figcaption>
