@@ -20,7 +20,10 @@ export default function PowerPointAutomationCaseStudy() {
         <main className={`${shared.caseStudy} ${styles.page}`}>
             <header className={`${shared.hero} ${shared.readingColumn}`}>
                 <p className={shared.eyebrow}>Case study · Workflow automation</p>
-                <h1>PowerPoint Automation</h1>
+                <h1>
+                    <span className={shared.titleLine}>PowerPoint</span>
+                    <span className={shared.titleLine}>Automation</span>
+                </h1>
                 <p className={shared.tagline}>
                     A deliberately small tool that proved a much larger product
                     opportunity.

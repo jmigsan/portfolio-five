@@ -1,11 +1,15 @@
-.page {
+main.page {
     --accent: #d4a017;
     --blue: #315bd6;
     overflow-x: clip;
     background: var(--paper);
 }
 
-.hero {
+.sectionAnchor {
+    scroll-margin-top: 8.5rem;
+}
+
+.page .hero {
     position: relative;
     width: 100%;
     min-height: min(48rem, calc(100svh - 4.5rem));
@@ -69,7 +73,7 @@
     white-space: nowrap;
 }
 
-.hero h1 {
+.page .hero h1 {
     max-width: none;
     margin: clamp(3.5rem, 10vh, 7rem) 0 1.5rem;
     color: #f7f4e9;
@@ -107,12 +111,12 @@
 }
 
 @media (min-width: 701px) {
-    .hero {
+    .page .hero {
         min-height: calc(100svh - 4.5rem);
         padding-block: clamp(2.5rem, 5vh, 4rem);
     }
 
-    .hero h1 {
+    .page .hero h1 {
         margin-top: clamp(2.5rem, 6vh, 4.5rem);
     }
 
@@ -159,7 +163,7 @@
     text-underline-offset: 0.35rem;
 }
 
-.caseIndex {
+.page > .caseIndex {
     position: sticky;
     top: 4.5rem;
     z-index: 20;
@@ -175,7 +179,7 @@
     scrollbar-width: none;
 }
 
-.caseIndex::-webkit-scrollbar {
+.page > .caseIndex::-webkit-scrollbar {
     display: none;
 }
 
@@ -183,8 +187,8 @@
     display: contents;
 }
 
-.caseIndex span,
-.caseIndex a {
+.page > .caseIndex span,
+.page > .caseIndex a {
     flex: 0 0 auto;
     font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
     font-size: 0.64rem;
@@ -193,23 +197,23 @@
     text-transform: uppercase;
 }
 
-.caseIndex span {
+.page > .caseIndex span {
     padding-right: 1.35rem;
     border-right: 1px solid var(--hairline);
     color: var(--muted);
 }
 
-.caseIndex a {
+.page > .caseIndex a {
     color: var(--ink);
     text-decoration: none;
 }
 
-.caseIndex a:hover,
-.caseIndex a:focus-visible {
+.page > .caseIndex a:hover,
+.page > .caseIndex a:focus-visible {
     color: var(--blue);
 }
 
-.introMedia {
+.page > .introMedia {
     margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 
@@ -376,11 +380,11 @@
     letter-spacing: 0.1em;
 }
 
-.decisionList h3 {
+.page .decisionList h3 {
     margin: 0 0 0.65rem;
 }
 
-.decisionList p {
+.page .decisionList p {
     margin-bottom: 0;
 }
 
@@ -470,13 +474,6 @@
     font-weight: 700;
     letter-spacing: 0.17em;
     text-transform: uppercase;
-}
-
-.inverseLabel::before {
-    width: 1.5rem;
-    height: 1px;
-    background: #e4b63b;
-    content: "";
 }
 
 .architectureCopy h2,
@@ -883,7 +880,11 @@
 }
 
 @media (max-width: 700px) {
-    .hero {
+    .sectionAnchor {
+        scroll-margin-top: 9.5rem;
+    }
+
+    .page .hero {
         min-height: calc(100svh - 4rem);
         padding-inline: 1rem;
     }
@@ -899,7 +900,7 @@
         text-align: left;
     }
 
-    .hero h1 {
+    .page .hero h1 {
         margin-top: 4rem;
     }
 
@@ -907,14 +908,14 @@
         font-size: clamp(1.65rem, 8vw, 2.5rem);
     }
 
-    .caseIndex {
+    .page > .caseIndex {
         top: 4rem;
         display: block;
         overflow: visible;
         padding: 0;
     }
 
-    .caseIndex span {
+    .page > .caseIndex span {
         display: block;
         padding: 0.7rem 1rem 0.55rem;
         border-right: 0;
@@ -937,7 +938,7 @@
         display: none;
     }
 
-    .caseIndex a {
+    .page > .caseIndex a {
         padding-block: 0.75rem;
         scroll-snap-align: start;
     }

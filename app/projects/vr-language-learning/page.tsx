@@ -20,7 +20,10 @@ export default function VrLanguageLearningCaseStudy() {
         <main className={`${shared.caseStudy} ${styles.page}`}>
             <header className={`${shared.hero} ${shared.readingColumn}`}>
                 <p className={shared.eyebrow}>Case study · Immersive AI</p>
-                <h1>VR Language Learning</h1>
+                <h1>
+                    <span className={shared.titleLine}>VR Language</span>
+                    <span className={shared.titleLine}>Learning</span>
+                </h1>
                 <p className={shared.tagline}>
                     Exploring language practice through spoken, contextual
                     conversations with virtual characters.

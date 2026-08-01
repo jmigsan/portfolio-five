@@ -25,6 +25,10 @@
     padding-block: clamp(3rem, 8vh, 5rem) clamp(3rem, 7vw, 5rem);
 }
 
+.hero.readingColumn {
+    width: min(calc(100% - 3rem), 48rem);
+}
+
 .eyebrow,
 .sectionLabel {
     display: flex;
@@ -39,14 +43,19 @@
 }
 
 .hero h1 {
-    max-width: 10ch;
+    max-width: none;
     margin: 1.25rem 0 1.5rem;
     font-family: var(--font-nacelle-black);
-    font-size: clamp(4rem, 10vw, 7.5rem);
+    font-size: clamp(3.75rem, 8vw, 6.5rem);
     font-weight: 900;
     letter-spacing: -0.055em;
     line-height: 0.82;
     text-wrap: balance;
+}
+
+.titleLine {
+    display: block;
+    white-space: nowrap;
 }
 
 .tagline {
@@ -243,18 +252,20 @@
 }
 
 .projectPager > span {
+    flex-shrink: 0;
     color: var(--muted);
     font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .projectPager a {
     color: var(--ink);
     font-family: var(--font-nacelle-black);
-    font-size: clamp(1.45rem, 4vw, 2.25rem);
+    font-size: clamp(1.25rem, 3vw, 1.85rem);
     line-height: 1;
     text-align: right;
 }
@@ -262,6 +273,10 @@
 @media (max-width: 640px) {
     .readingColumn,
     .mediaFrame {
+        width: calc(100% - 2rem);
+    }
+
+    .hero.readingColumn {
         width: calc(100% - 2rem);
     }
 
@@ -275,7 +290,7 @@
     }
 
     .hero h1 {
-        font-size: clamp(3.6rem, 18vw, 5.6rem);
+        font-size: clamp(3rem, 14vw, 4.75rem);
     }
 
     .factGrid {

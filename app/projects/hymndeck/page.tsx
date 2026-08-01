@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import DirectionalLink from "../../components/DirectionalLink";
 import {
     MediaFrame,
     ProjectFact,
@@ -118,7 +119,10 @@ export default function HymnDeckCaseStudy() {
                 </video>
             </MediaFrame>
 
-            <article id='story' className={shared.articleBody}>
+            <article
+                id='story'
+                className={`${shared.articleBody} ${styles.sectionAnchor}`}
+            >
                 <div className={shared.readingColumn}>
                     <p className={shared.standfirst}>
                         I owned HymnDeck end to end: customer workflows,
@@ -146,7 +150,7 @@ export default function HymnDeckCaseStudy() {
 
                 <section
                     id='problem'
-                    className={`${shared.section} ${shared.readingColumn}`}
+                    className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
                     <p className={shared.sectionLabel}>The problem</p>
                     <h2>The capable person gets every job</h2>
@@ -246,7 +250,7 @@ export default function HymnDeckCaseStudy() {
 
                 <section
                     id='product'
-                    className={`${shared.section} ${shared.readingColumn}`}
+                    className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
                     <p className={shared.sectionLabel}>Product decisions</p>
                     <h2>Automate the expensive part. Keep humans in control.</h2>
@@ -346,7 +350,10 @@ export default function HymnDeckCaseStudy() {
                     </div>
                 </div>
 
-                <section id='architecture' className={styles.architectureSection}>
+                <section
+                    id='architecture'
+                    className={`${styles.architectureSection} ${styles.sectionAnchor}`}
+                >
                     <div className={styles.architectureCopy}>
                         <p className={styles.inverseLabel}>Architecture</p>
                         <h2>Serverless by constraint, not by slogan</h2>
@@ -450,7 +457,10 @@ export default function HymnDeckCaseStudy() {
                     </details>
                 </section>
 
-                <section id='engineering' className={styles.engineeringSection}>
+                <section
+                    id='engineering'
+                    className={`${styles.engineeringSection} ${styles.sectionAnchor}`}
+                >
                     <div className={styles.sectionIntro}>
                         <p className={shared.sectionLabel}>
                             Three engineering problems
@@ -616,7 +626,10 @@ export default function HymnDeckCaseStudy() {
                     </div>
                 </section>
 
-                <section id='results' className={styles.resultsSection}>
+                <section
+                    id='results'
+                    className={`${styles.resultsSection} ${styles.sectionAnchor}`}
+                >
                     <div className={styles.resultsHeader}>
                         <p className={styles.inverseLabel}>Results, honestly</p>
                         <h2>Useful product. Real users. No commercial traction.</h2>
@@ -660,7 +673,7 @@ export default function HymnDeckCaseStudy() {
 
                 <section
                     id='lessons'
-                    className={`${shared.section} ${shared.readingColumn}`}
+                    className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
                     <p className={shared.sectionLabel}>What I would do differently</p>
                     <h2>Review the intent, not only the code</h2>
@@ -708,11 +721,11 @@ export default function HymnDeckCaseStudy() {
                         application engineering and AI-enabled systems meet.
                     </p>
                     <div className={styles.closingActions}>
-                        <a href='/contact'>
+                        <DirectionalLink href='/contact' direction='right'>
                             <span>For founders</span>
                             Turn a defined workflow into an MVP
-                            <b aria-hidden='true'>→</b>
-                        </a>
+                            <b aria-hidden='true'>←</b>
+                        </DirectionalLink>
                         <a href='/Juan Miguel Sanchez CV.pdf'>
                             <span>For hiring teams</span>
                             View my CV

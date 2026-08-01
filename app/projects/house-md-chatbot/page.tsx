@@ -20,7 +20,10 @@ export default function HouseMdChatbotCaseStudy() {
         <main className={`${shared.caseStudy} ${styles.page}`}>
             <header className={`${shared.hero} ${shared.readingColumn}`}>
                 <p className={shared.eyebrow}>Case study · Applied AI</p>
-                <h1>House MD Chatbot</h1>
+                <h1>
+                    <span className={shared.titleLine}>House MD</span>
+                    <span className={shared.titleLine}>Chatbot</span>
+                </h1>
                 <p className={shared.tagline}>
                     Fine-tuning, retrieval and private inference brought together
                     as one complete application.

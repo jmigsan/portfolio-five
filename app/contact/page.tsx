@@ -16,6 +16,14 @@ const Contact = () => {
                 </LinkWrapper>
             </div>
 
+            <div className='absolute top-5 right-7 md:top-7 md:right-10 z-50'>
+                <LinkWrapper>
+                    <DirectionalLink href='/projects' direction='left'>
+                        My Projects →
+                    </DirectionalLink>
+                </LinkWrapper>
+            </div>
+
             <div className='flex-1 flex items-center justify-center p-4 mt-20 md:mt-0'>
                 {/* Main Card Container */}
                 <div className='relative w-full max-w-2xl bg-[#fdfbf7] p-8 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-sm border border-[#e0e0e0] transform rotate-1 transition-transform hover:rotate-0 duration-500'>
