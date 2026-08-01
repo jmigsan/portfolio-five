@@ -97,12 +97,14 @@ export default function HymnDeckCaseStudy() {
 
             <nav className={styles.caseIndex} aria-label='Case study sections'>
                 <span>Inside the build</span>
-                <a href='#problem'>Problem</a>
-                <a href='#product'>Product</a>
-                <a href='#architecture'>Architecture</a>
-                <a href='#engineering'>Engineering</a>
-                <a href='#results'>Results</a>
-                <a href='#lessons'>Lessons</a>
+                <div className={styles.caseIndexLinks}>
+                    <a href='#problem'>Problem</a>
+                    <a href='#product'>Product</a>
+                    <a href='#architecture'>Architecture</a>
+                    <a href='#engineering'>Engineering</a>
+                    <a href='#results'>Results</a>
+                    <a href='#lessons'>Lessons</a>
+                </div>
             </nav>
 
             <MediaFrame

@@ -11,10 +11,7 @@
     min-height: min(48rem, calc(100svh - 4.5rem));
     overflow: hidden;
     padding: clamp(4.5rem, 10vw, 8rem) clamp(1.25rem, 6vw, 5rem);
-    background:
-        radial-gradient(circle at 78% 24%, rgba(69, 104, 255, 0.28), transparent 26rem),
-        radial-gradient(circle at 18% 82%, rgba(212, 160, 23, 0.22), transparent 24rem),
-        #0c1020;
+    background: #0c1020;
     color: #f7f4e9;
 }
 
@@ -182,6 +179,10 @@
     display: none;
 }
 
+.caseIndexLinks {
+    display: contents;
+}
+
 .caseIndex span,
 .caseIndex a {
     flex: 0 0 auto;
@@ -222,9 +223,7 @@
     padding: clamp(1.5rem, 4vw, 3.2rem);
     border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--hairline));
     border-radius: 1.4rem;
-    background:
-        linear-gradient(120deg, color-mix(in srgb, var(--accent) 16%, var(--paper)), transparent 65%),
-        var(--paper);
+    background: var(--paper);
     box-shadow: 0 1.5rem 4rem rgba(23, 23, 25, 0.08);
 }
 
@@ -775,9 +774,7 @@
     padding: clamp(2rem, 6vw, 5rem);
     border: 1px solid var(--hairline);
     border-radius: 1.5rem;
-    background:
-        radial-gradient(circle at 95% 0%, color-mix(in srgb, var(--blue) 22%, transparent), transparent 28rem),
-        color-mix(in srgb, var(--blue) 5%, var(--paper));
+    background: color-mix(in srgb, var(--blue) 5%, var(--paper));
 }
 
 .closingKicker {
@@ -912,6 +909,37 @@
 
     .caseIndex {
         top: 4rem;
+        display: block;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .caseIndex span {
+        display: block;
+        padding: 0.7rem 1rem 0.55rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--hairline);
+        background: color-mix(in srgb, var(--paper) 96%, transparent);
+    }
+
+    .caseIndexLinks {
+        display: flex;
+        gap: 1.15rem;
+        overflow-x: auto;
+        padding-inline: 1rem 2.75rem;
+        scroll-padding-inline: 1rem;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        mask-image: linear-gradient(to right, black 0, black calc(100% - 2rem), transparent 100%);
+    }
+
+    .caseIndexLinks::-webkit-scrollbar {
+        display: none;
+    }
+
+    .caseIndex a {
+        padding-block: 0.75rem;
+        scroll-snap-align: start;
     }
 
     .impactRail {
