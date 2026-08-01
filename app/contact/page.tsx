@@ -10,7 +10,7 @@ const Contact = () => {
         <div className='flex flex-col min-h-screen relative overflow-hidden bg-[#f4f1ea] text-black font-lora'>
             {/* Background elements can go here if needed to match the "desk" vibe, but proceeding with clean center first */}
 
-            <div className='absolute top-7 left-7 md:top-10 md:left-10 z-50'>
+            <div className='absolute top-5 left-7 md:top-7 md:left-10 z-50'>
                 <LinkWrapper>
                     <DirectionalLink href='/'>Back to Home ↑</DirectionalLink>
                 </LinkWrapper>
