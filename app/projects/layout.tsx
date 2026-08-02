@@ -17,7 +17,7 @@ export default function ProjectsLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className={styles.projectsViewport}>
+        <div className={styles.projectsViewport} data-projects-viewport>
             <ProjectNavigation />
             {children}
         </div>

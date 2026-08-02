@@ -8,6 +8,7 @@ import {
     PullQuote,
 } from "../_components/CaseStudyElements";
 import shared from "../_components/case-study.module.css";
+import CaseStudyIndex from "./CaseStudyIndex";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -96,17 +97,7 @@ export default function HymnDeckCaseStudy() {
                 </div>
             </header>
 
-            <nav className={styles.caseIndex} aria-label='Case study sections'>
-                <span>Inside the build</span>
-                <div className={styles.caseIndexLinks}>
-                    <a href='#problem'>Problem</a>
-                    <a href='#product'>Product</a>
-                    <a href='#architecture'>Architecture</a>
-                    <a href='#engineering'>Engineering</a>
-                    <a href='#results'>Results</a>
-                    <a href='#lessons'>Lessons</a>
-                </div>
-            </nav>
+            <CaseStudyIndex />
 
             <MediaFrame
                 wide
