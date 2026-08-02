@@ -46,53 +46,65 @@ export default function ProjectNavigation() {
             default='project-navigation-static'
         >
             <header className={styles.header}>
-            <LinkWrapper>
-                <DirectionalLink href='/'>
-                    <span aria-hidden='true'>←</span> Back to Home
-                </DirectionalLink>
-            </LinkWrapper>
+                <LinkWrapper>
+                    <DirectionalLink href='/'>
+                        <span aria-hidden='true'>←</span>{" "}
+                        <span className={styles.desktopHomeLabel}>
+                            Back to Home
+                        </span>
+                        <span className={styles.mobileHomeLabel}>Home</span>
+                    </DirectionalLink>
+                </LinkWrapper>
 
-            <nav className={styles.rail} aria-label='Project case studies'>
-                {projects.map((project) => {
-                    const isActive = pathname === project.href;
+                <div className={styles.railViewport}>
+                    <nav
+                        className={styles.rail}
+                        aria-label='Project case studies'
+                    >
+                        {projects.map((project) => {
+                            const isActive = pathname === project.href;
 
-                    return (
-                        <DirectionalLink
-                            key={project.href}
-                            href={project.href}
-                            aria-label={project.label}
-                            aria-current={isActive ? "page" : undefined}
-                            className={`${styles.projectLink} ${
-                                isActive ? styles.active : ""
-                            }`}
-                            style={
-                                {
-                                    "--project-accent": project.accent,
-                                } as React.CSSProperties
-                            }
-                        >
-                            <span className={styles.tile} aria-hidden='true'>
-                                <video
-                                    className={styles.preview}
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    preload='metadata'
+                            return (
+                                <DirectionalLink
+                                    key={project.href}
+                                    href={project.href}
+                                    aria-label={project.label}
+                                    aria-current={isActive ? "page" : undefined}
+                                    className={`${styles.projectLink} ${
+                                        isActive ? styles.active : ""
+                                    }`}
+                                    style={
+                                        {
+                                            "--project-accent": project.accent,
+                                        } as React.CSSProperties
+                                    }
                                 >
-                                    <source
-                                        src={project.videoSrc}
-                                        type='video/mp4'
-                                    />
-                                </video>
-                            </span>
-                            <span className={styles.projectName}>
-                                {project.shortLabel}
-                            </span>
-                        </DirectionalLink>
-                    );
-                })}
-            </nav>
+                                    <span
+                                        className={styles.tile}
+                                        aria-hidden='true'
+                                    >
+                                        <video
+                                            className={styles.preview}
+                                            autoPlay
+                                            muted
+                                            loop
+                                            playsInline
+                                            preload='metadata'
+                                        >
+                                            <source
+                                                src={project.videoSrc}
+                                                type='video/mp4'
+                                            />
+                                        </video>
+                                    </span>
+                                    <span className={styles.projectName}>
+                                        {project.shortLabel}
+                                    </span>
+                                </DirectionalLink>
+                            );
+                        })}
+                    </nav>
+                </div>
             </header>
         </ViewTransition>
     );
