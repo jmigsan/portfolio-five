@@ -1,15 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { addTransitionType, startTransition } from "react";
+import { usePathname } from "next/navigation";
 import type { ComponentProps } from "react";
 
 export type SlideDirection = "left" | "right" | "up" | "down" | "fade";
 
 type DirectionalLinkProps = Omit<
     ComponentProps<typeof Link>,
-    "href" | "onNavigate"
+    "href" | "transitionTypes"
 > & {
     href: string;
     direction?: SlideDirection;
@@ -54,40 +53,20 @@ const getDirection = (from: string, to: string): SlideDirection => {
 export default function DirectionalLink({
     href,
     direction,
-    replace,
-    scroll,
     ...props
 }: DirectionalLinkProps) {
     const pathname = usePathname();
-    const router = useRouter();
+    const resolvedDirection = direction ?? getDirection(pathname, href);
+    const transitionType =
+        resolvedDirection === "fade"
+            ? "route-fade"
+            : `route-slide-${resolvedDirection}`;
 
     return (
         <Link
             {...props}
             href={href}
-            replace={replace}
-            scroll={scroll}
-            onNavigate={(event) => {
-                event.preventDefault();
-
-                startTransition(() => {
-                    const resolvedDirection =
-                        direction ?? getDirection(pathname, href);
-                    const transitionType =
-                        resolvedDirection === "fade"
-                            ? "route-fade"
-                            : `route-slide-${resolvedDirection}`;
-
-                    addTransitionType(transitionType);
-
-                    const options = { scroll };
-                    if (replace) {
-                        router.replace(href, options);
-                    } else {
-                        router.push(href, options);
-                    }
-                });
-            }}
+            transitionTypes={[transitionType]}
         />
     );
 }
