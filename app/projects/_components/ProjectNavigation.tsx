@@ -2,6 +2,7 @@
 
 import { ViewTransition } from "react";
 import { usePathname } from "next/navigation";
+import { House } from "lucide-react";
 import DirectionalLink from "../../components/DirectionalLink";
 import LinkWrapper from "../../components/LinkWrapper";
 import styles from "./project-navigation.module.css";
@@ -47,12 +48,23 @@ export default function ProjectNavigation() {
         >
             <header className={styles.header}>
                 <LinkWrapper>
-                    <DirectionalLink href='/'>
-                        <span aria-hidden='true'>←</span>{" "}
+                    <DirectionalLink href='/' aria-label='Back to Home'>
+                        <span
+                            className={styles.homeArrow}
+                            aria-hidden='true'
+                        >
+                            ←
+                        </span>{" "}
                         <span className={styles.desktopHomeLabel}>
                             Back to Home
                         </span>
                         <span className={styles.mobileHomeLabel}>Home</span>
+                        <House
+                            className={styles.mobileHomeIcon}
+                            size={24}
+                            strokeWidth={1.75}
+                            aria-hidden='true'
+                        />
                     </DirectionalLink>
                 </LinkWrapper>
 
