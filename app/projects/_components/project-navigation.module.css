@@ -142,29 +142,22 @@
         overflow: hidden;
     }
 
-    .railViewport::before,
-    .railViewport::after {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        z-index: 2;
-        width: 1rem;
-        pointer-events: none;
-        content: "";
-    }
-
-    .railViewport::before {
-        left: 0;
-        background: linear-gradient(to right, var(--paper), transparent);
-    }
-
-    .railViewport::after {
-        right: 0;
-        background: linear-gradient(to left, var(--paper), transparent);
-    }
-
     .rail {
         padding: 0.35rem 1rem;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 1rem,
+            black calc(100% - 1rem),
+            transparent
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 1rem,
+            black calc(100% - 1rem),
+            transparent
+        );
     }
 
     .projectLink,
