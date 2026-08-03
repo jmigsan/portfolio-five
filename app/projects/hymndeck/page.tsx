@@ -713,12 +713,10 @@ export default function HymnDeckCaseStudy() {
                     </p>
                     <div className={styles.closingActions}>
                         <DirectionalLink href='/contact' direction='right'>
-                            <span>For founders</span>
                             Turn a defined workflow into an MVP
                             <b aria-hidden='true'>←</b>
                         </DirectionalLink>
                         <a href='/Juan Miguel Sanchez CV.pdf'>
-                            <span>For hiring teams</span>
                             View my CV
                             <b aria-hidden='true'>↗</b>
                         </a>
