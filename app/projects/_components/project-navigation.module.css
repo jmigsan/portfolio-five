@@ -182,6 +182,10 @@
 }
 
 @media (max-width: 409px) {
+    .homeLink :global(.link-circle) {
+        stroke-width: 16;
+    }
+
     .homeArrow {
         display: none;
     }

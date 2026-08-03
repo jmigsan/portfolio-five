@@ -47,7 +47,7 @@ export default function ProjectNavigation() {
             default='project-navigation-static'
         >
             <header className={styles.header}>
-                <LinkWrapper>
+                <LinkWrapper className={styles.homeLink}>
                     <DirectionalLink href='/' aria-label='Back to Home'>
                         <span
                             className={styles.homeArrow}
