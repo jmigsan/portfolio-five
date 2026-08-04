@@ -20,8 +20,12 @@ const eduSA = Edu_SA_Beginner({
 });
 
 export const metadata: Metadata = {
-    title: "Juan Miguel Sanchez | Portfolio",
-    description: "Juan Miguel Sanchez's Portfolio",
+    title: {
+        default: "Juan Miguel Sanchez | Full-Stack Product Engineer",
+        template: "%s | Juan Miguel Sanchez",
+    },
+    description:
+        "Personal portfolio of Juan Miguel Sanchez — Full-Stack Product Engineer specializing in AI applications and design engineering.",
 };
 
 export default function RootLayout({

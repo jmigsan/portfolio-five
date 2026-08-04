@@ -12,7 +12,7 @@ import CaseStudyIndex from "./CaseStudyIndex";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-    title: "HymnDeck — Building an AI SaaS from Zero to Production",
+    title: "HymnDeck Case Study",
     description:
         "How Juan Miguel Sanchez built and launched a production AI workflow for church worship teams — from customer research to infrastructure and support.",
 };
@@ -713,7 +713,7 @@ export default function HymnDeckCaseStudy() {
                     </p>
                     <div className={styles.closingActions}>
                         <DirectionalLink href='/contact' direction='right'>
-                            Turn a defined workflow into an MVP
+                            Contact me to turn your workflow into an MVP
                             <b aria-hidden='true'>←</b>
                         </DirectionalLink>
                         <a href='/Juan Miguel Sanchez CV.pdf'>

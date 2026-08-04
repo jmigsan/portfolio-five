@@ -3,10 +3,7 @@ import ProjectNavigation from "./_components/ProjectNavigation";
 import styles from "./projects.module.css";
 
 export const metadata: Metadata = {
-    title: {
-        default: "Projects | Juan Miguel Sanchez",
-        template: "%s | Juan Miguel Sanchez",
-    },
+    title: "Projects",
     description:
         "Product engineering case studies by Juan Miguel Sanchez, from problem discovery to production deployment.",
 };

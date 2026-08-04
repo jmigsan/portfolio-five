@@ -10,7 +10,7 @@ import shared from "../_components/case-study.module.css";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-    title: "House MD Chatbot — AI Systems Case Study",
+    title: "House MD Chatbot",
     description:
         "A full-stack LLM experiment combining model fine-tuning, retrieval and production deployment.",
 };

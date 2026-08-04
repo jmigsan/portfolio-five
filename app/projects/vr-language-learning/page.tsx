@@ -10,7 +10,7 @@ import shared from "../_components/case-study.module.css";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-    title: "VR Language Learning — Conversational AI Case Study",
+    title: "VR Language Learning",
     description:
         "An experimental VR language-learning experience with speech input and dynamically generated NPC dialogue.",
 };

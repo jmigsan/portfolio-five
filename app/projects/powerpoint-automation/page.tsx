@@ -10,7 +10,7 @@ import shared from "../_components/case-study.module.css";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-    title: "PowerPoint Automation — Product Case Study",
+    title: "PowerPoint Automation",
     description:
         "The desktop automation tool that reduced a recurring PowerPoint workflow from two hours to fifteen minutes.",
 };
