@@ -116,12 +116,17 @@
         0 0 0 4px var(--project-accent);
 }
 
+.homeLink {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
 .mobileHomeLabel,
 .mobileHomeIcon {
     display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .header {
         min-height: 4rem;
         gap: 0.4rem;
@@ -174,7 +179,7 @@
     }
 }
 
-@media (max-width: 409px) {
+@media (max-width: 480px) {
     .homeLink {
         position: relative;
         z-index: 3;
