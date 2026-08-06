@@ -1,13 +1,19 @@
 "use client";
 
+import { Edu_SA_Beginner } from "next/font/google";
 import DirectionalLink from "../components/DirectionalLink";
 import LinkWrapper from "../components/LinkWrapper"; // Assuming this path is correct based on previous file content
 import Image from "next/image";
 import profilePic from "../assets/professional-me.jpg"; // Importing the image directly
 
+const eduSA = Edu_SA_Beginner({
+    subsets: ["latin"],
+    variable: "--font-edu-sa",
+});
+
 const Contact = () => {
     return (
-        <div className='flex flex-col min-h-screen relative overflow-hidden bg-[#f4f1ea] text-black font-lora'>
+        <div className={`flex flex-col min-h-screen relative overflow-hidden bg-[#f4f1ea] text-black font-lora ${eduSA.variable}`}>
             {/* Background elements can go here if needed to match the "desk" vibe, but proceeding with clean center first */}
 
             <div className='absolute top-5 left-7 md:top-7 md:left-10 z-50'>

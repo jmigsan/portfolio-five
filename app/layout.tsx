@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Lora, Edu_SA_Beginner } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./globals.css";
 import RouteViewTransition from "./components/RouteViewTransition";
 
@@ -12,11 +12,6 @@ const nacelleBlack = localFont({
 const lora = Lora({
     subsets: ["latin"],
     variable: "--font-lora",
-});
-
-const eduSA = Edu_SA_Beginner({
-    subsets: ["latin"],
-    variable: "--font-edu-sa",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body
-                className={`${nacelleBlack.variable} ${lora.variable} ${eduSA.variable} antialiased h-[100dvh] flex flex-col overflow-hidden`}
+                className={`${nacelleBlack.variable} ${lora.variable} antialiased h-[100dvh] flex flex-col overflow-hidden`}
             >
                 <RouteViewTransition>{children}</RouteViewTransition>
             </body>
