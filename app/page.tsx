@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import AttributionModal from "./components/AttributionModal";
+import dynamic from "next/dynamic";
 import DirectionalLink from "./components/DirectionalLink";
 import LinkWrapper from "./components/LinkWrapper";
+
+const AttributionModal = dynamic(() => import("./components/AttributionModal"), {
+    ssr: false,
+});
 
 const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
