@@ -20,11 +20,12 @@ const Home = () => {
         <div className='isolate flex-1 flex flex-col p-12 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
             <div
                 aria-hidden='true'
-                className='fixed inset-0 z-0 bg-cover bg-[position:center_74%]'
+                className='pointer-events-none fixed inset-0 z-0 bg-cover bg-[position:center_74%]'
                 style={{ backgroundImage: "url('/road-poster.webp')" }}
             >
                 <video
                     autoPlay
+                    disablePictureInPicture
                     loop
                     muted
                     playsInline
