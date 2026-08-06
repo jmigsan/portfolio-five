@@ -47,7 +47,7 @@ const Contact = () => {
                                         fill
                                         sizes='192px'
                                         className='object-cover'
-                                        priority
+                                        preload
                                     />
                                 </div>
                                 {/* Paper clip visual could be CSS or SVG */}
