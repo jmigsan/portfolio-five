@@ -11,25 +11,34 @@ const AttributionModal = dynamic(() => import("./components/AttributionModal"), 
 
 const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isVideoReady, setIsVideoReady] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <div className='flex-1 flex flex-col p-12 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className='fixed top-0 left-0 w-full h-full object-cover object-[center_74%] -z-10'
-                poster="/road-poster.webp"
-                preload="metadata"
+        <div className='isolate flex-1 flex flex-col p-12 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
+            <div
+                aria-hidden='true'
+                className='fixed inset-0 z-0 bg-cover bg-[position:center_74%]'
+                style={{ backgroundImage: "url('/road-poster.webp')" }}
             >
-                <source src="/road.webm" type="video/webm" />
-                <source src='/road.mp4' type='video/mp4' />
-            </video>
-            <div className='flex justify-between text-xl sm:text-2xl'>
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload='metadata'
+                    onLoadedData={() => setIsVideoReady(true)}
+                    className={`h-full w-full object-cover object-[center_74%] transition-opacity duration-200 motion-reduce:transition-none ${
+                        isVideoReady ? "opacity-100" : "opacity-0"
+                    }`}
+                >
+                    <source src='/road.webm' type='video/webm' />
+                    <source src='/road.mp4' type='video/mp4' />
+                </video>
+            </div>
+            <div className='relative z-10 flex justify-between text-xl sm:text-2xl'>
                 <LinkWrapper>
                     <DirectionalLink
                         href='/about'
@@ -47,7 +56,7 @@ const Home = () => {
                     </DirectionalLink>
                 </LinkWrapper>
             </div>
-            <div className='flex flex-col items-center sm:gap-7 gap-5'>
+            <div className='relative z-10 flex flex-col items-center sm:gap-7 gap-5'>
                 <p className='text-2xl sm:text-3xl font-lora font-medium'>
                     Juan Miguel Sanchez
                 </p>
@@ -57,7 +66,7 @@ const Home = () => {
                     and deploy AI solutions
                 </h1>
             </div>
-            <div className='flex justify-between text-xl md:text-2xl'>
+            <div className='relative z-10 flex justify-between text-xl md:text-2xl'>
                 <LinkWrapper>
                     <DirectionalLink
                         href='/contact'
