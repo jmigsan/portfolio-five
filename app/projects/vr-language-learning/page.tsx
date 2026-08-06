@@ -34,7 +34,7 @@ export default function VrLanguageLearningCaseStudy() {
                 wide
                 caption='An early demonstration of the virtual environment and conversational loop.'
             >
-                <video controls muted playsInline preload='metadata'>
+                <video controls muted playsInline preload='metadata' poster='/vr-demo-poster.webp'>
                     <source src='/vr-demo.mp4' type='video/mp4' />
                     Your browser does not support embedded video.
                 </video>

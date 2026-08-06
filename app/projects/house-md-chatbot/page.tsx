@@ -34,7 +34,7 @@ export default function HouseMdChatbotCaseStudy() {
                 wide
                 caption='A working interface for the fine-tuned model and retrieval pipeline.'
             >
-                <video controls muted playsInline preload='metadata'>
+                <video controls muted playsInline preload='metadata' poster='/house-demo-poster.webp'>
                     <source src='/house-demo.mp4' type='video/mp4' />
                     Your browser does not support embedded video.
                 </video>
