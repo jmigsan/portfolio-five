@@ -14,6 +14,7 @@ const projects = [
         label: "HymnDeck case study",
         accent: "#d4a017",
         videoSrc: "/hymndeck-demo-small.mp4",
+        posterSrc: "/hymndeck-demo-small-poster.webp",
     },
     {
         href: "/projects/house-md-chatbot",
@@ -21,6 +22,7 @@ const projects = [
         label: "House MD Chatbot case study",
         accent: "#173b6c",
         videoSrc: "/house-demo-small.mp4",
+        posterSrc: "/house-demo-small-poster.webp",
     },
     {
         href: "/projects/powerpoint-automation",
@@ -28,6 +30,7 @@ const projects = [
         label: "PowerPoint Automation Tool case study",
         accent: "#159a9c",
         videoSrc: "/ppt-demo-small.mp4",
+        posterSrc: "/ppt-demo-small-poster.webp",
     },
     {
         href: "/projects/vr-language-learning",
@@ -35,6 +38,7 @@ const projects = [
         label: "VR Language Learning App case study",
         accent: "#7250a8",
         videoSrc: "/vr-demo-small.mp4",
+        posterSrc: "/vr-demo-small-poster.webp",
     },
 ] as const;
 
@@ -101,6 +105,7 @@ export default function ProjectNavigation() {
                                             loop
                                             playsInline
                                             preload='metadata'
+                                            poster={project.posterSrc}
                                         >
                                             <source
                                                 src={project.videoSrc}
