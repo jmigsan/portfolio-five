@@ -10,7 +10,7 @@ import shared from "../_components/case-study.module.css";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-    title: "House MD Chatbot",
+    title: "House MD Chatbot | Juan Miguel Sanchez",
     description:
         "A full-stack LLM experiment combining model fine-tuning, retrieval and production deployment.",
 };

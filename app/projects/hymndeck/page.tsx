@@ -12,7 +12,7 @@ import CaseStudyIndex from "./CaseStudyIndex";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-    title: "HymnDeck Case Study",
+    title: "HymnDeck | Juan Miguel Sanchez",
     description:
         "How Juan Miguel Sanchez built and launched a production AI workflow for church worship teams — from customer research to infrastructure and support.",
 };
