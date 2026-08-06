@@ -19,7 +19,10 @@ const Home = () => {
                 muted
                 playsInline
                 className='fixed top-0 left-0 w-full h-full object-cover object-[center_74%] -z-10'
+                poster="/roadposter.webp"
+                preload="metadata"
             >
+                <source src="/road.webm" type="video/webm" />
                 <source src='/road.mp4' type='video/mp4' />
             </video>
             <div className='flex justify-between text-xl sm:text-2xl'>
