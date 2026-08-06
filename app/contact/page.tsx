@@ -2,9 +2,9 @@
 
 import { Edu_SA_Beginner } from "next/font/google";
 import DirectionalLink from "../components/DirectionalLink";
-import LinkWrapper from "../components/LinkWrapper"; // Assuming this path is correct based on previous file content
+import LinkWrapper from "../components/LinkWrapper";
 import Image from "next/image";
-import profilePic from "../assets/professional-me.jpg"; // Importing the image directly
+import profilePic from "../assets/professional-me.jpg";
 
 const eduSA = Edu_SA_Beginner({
     subsets: ["latin"],
@@ -16,13 +16,13 @@ const Contact = () => {
         <div className={`flex flex-col min-h-screen relative overflow-hidden bg-[#f4f1ea] text-black font-lora ${eduSA.variable}`}>
             {/* Background elements can go here if needed to match the "desk" vibe, but proceeding with clean center first */}
 
-            <div className='absolute top-5 left-7 md:top-7 md:left-10 z-50'>
+            <div className='absolute top-5 left-7 lg:top-7 lg:left-10 z-50'>
                 <LinkWrapper>
                     <DirectionalLink href='/'>Back to Home ↑</DirectionalLink>
                 </LinkWrapper>
             </div>
 
-            <div className='absolute top-5 right-7 md:top-7 md:right-10 z-50'>
+            <div className='absolute top-5 right-7 lg:top-7 lg:right-10 z-50'>
                 <LinkWrapper>
                     <DirectionalLink href='/projects' direction='left'>
                         My Projects →
@@ -30,16 +30,16 @@ const Contact = () => {
                 </LinkWrapper>
             </div>
 
-            <div className='flex-1 flex items-center justify-center p-4 mt-20 md:mt-0'>
+            <div className='flex-1 flex items-center justify-center p-4 mt-20 lg:mt-0'>
                 {/* Main Card Container */}
-                <div className='relative w-full max-w-2xl bg-[#fdfbf7] p-8 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-sm border border-[#e0e0e0] transform rotate-1 transition-transform hover:rotate-0 duration-500'>
+                <div className='relative w-full max-w-2xl bg-[#fdfbf7] p-8 lg:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-sm border border-[#e0e0e0] transform rotate-1 transition-transform hover:rotate-0 duration-500'>
                     {/* decorative elements (tape, clips could go here) */}
                     <div className='absolute -top-6 left-1/2 -translate-x-1/2 w-32 h-12 bg-yellow-100/80 backdrop-blur-sm rotate-2 shadow-sm border border-yellow-200/50'></div>
 
-                    <div className='flex flex-col md:flex-row gap-8 items-center'>
+                    <div className='flex flex-col lg:flex-row gap-8 items-center'>
                         {/* Photo Section */}
                         <div className='relative shrink-0'>
-                            <div className='w-48 h-64 bg-white p-3 shadow-md transform -rotate-3 border border-gray-200 -mt-8 md:-mt-74 -mr-16 md:mr-0'>
+                            <div className='w-48 h-64 bg-white p-3 shadow-md transform -rotate-3 border border-gray-200 -mt-8 lg:-mt-74 -mr-16 lg:mr-0'>
                                 <div className='relative w-full h-full overflow-hidden grayscale contrast-125'>
                                     <Image
                                         src={profilePic}
@@ -72,7 +72,7 @@ const Contact = () => {
                         {/* Content Section */}
                         <div className='flex-1 text-left w-full'>
                             <div className='border-b-2 border-black pb-4 mb-4'>
-                                <h1 className='text-4xl md:text-5xl font-bold font-nacelle-black tracking-tight mb-2'>
+                                <h1 className='text-4xl lg:text-5xl font-bold font-nacelle-black tracking-tight mb-2'>
                                     Juan Miguel Sanchez
                                 </h1>
                                 <p className='text-xl text-gray-600 font-medium italic'>
@@ -80,7 +80,7 @@ const Contact = () => {
                                 </p>
                             </div>
 
-                            <div className='space-y-4 font-mono text-sm md:text-base'>
+                            <div className='space-y-4 font-mono text-sm lg:text-base'>
                                 <div className='flex flex-col gap-1'>
                                     <span className='text-gray-500 uppercase tracking-wider text-xs font-bold'>
                                         Organization
