@@ -13,28 +13,28 @@ const projects = [
         shortLabel: "HymnDeck",
         label: "HymnDeck case study",
         accent: "#d4a017",
-        videoSrc: "/hymndeck-demo.mp4",
+        videoSrc: "/hymndeck-demo-small.mp4",
     },
     {
         href: "/projects/house-md-chatbot",
         shortLabel: "House MD",
         label: "House MD Chatbot case study",
         accent: "#173b6c",
-        videoSrc: "/house-demo.mp4",
+        videoSrc: "/house-demo-small.mp4",
     },
     {
         href: "/projects/powerpoint-automation",
         shortLabel: "PPT Tool",
         label: "PowerPoint Automation Tool case study",
         accent: "#159a9c",
-        videoSrc: "/ppt-demo.mp4",
+        videoSrc: "/ppt-demo-small.mp4",
     },
     {
         href: "/projects/vr-language-learning",
         shortLabel: "VR Language",
         label: "VR Language Learning App case study",
         accent: "#7250a8",
-        videoSrc: "/vr-demo.mp4",
+        videoSrc: "/vr-demo-small.mp4",
     },
 ] as const;
 
@@ -82,9 +82,8 @@ export default function ProjectNavigation() {
                                     href={project.href}
                                     aria-label={project.label}
                                     aria-current={isActive ? "page" : undefined}
-                                    className={`${styles.projectLink} ${
-                                        isActive ? styles.active : ""
-                                    }`}
+                                    className={`${styles.projectLink} ${isActive ? styles.active : ""
+                                        }`}
                                     style={
                                         {
                                             "--project-accent": project.accent,
