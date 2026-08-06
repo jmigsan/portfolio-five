@@ -46,6 +46,7 @@ const About = () => {
                                     src={image}
                                     alt={`Polaroid ${i + 1}`}
                                     fill
+                                    sizes='300px'
                                     className='object-cover'
                                 />
                             </div>

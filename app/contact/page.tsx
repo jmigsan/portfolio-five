@@ -39,6 +39,7 @@ const Contact = () => {
                                         src={profilePic}
                                         alt='Juan Miguel Sanchez'
                                         fill
+                                        sizes='192px'
                                         className='object-cover'
                                         priority
                                     />
