@@ -298,7 +298,7 @@ main.page {
 
 .impactNumber {
     font-family: var(--font-nacelle-black);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     letter-spacing: -0.06em;
     line-height: 0.86;
 }
@@ -1073,7 +1073,7 @@ main.page {
     }
 
     .impactNumber {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .resultsGrid {
