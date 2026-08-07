@@ -47,6 +47,7 @@ const About = () => {
                                     alt={`Polaroid ${i + 1}`}
                                     fill
                                     sizes='300px'
+                                    placeholder='blur'
                                     className='object-cover'
                                 />
                             </div>

@@ -46,6 +46,7 @@ const Contact = () => {
                                         alt='Juan Miguel Sanchez'
                                         fill
                                         sizes='192px'
+                                        placeholder='blur'
                                         className='object-cover'
                                         preload
                                     />
