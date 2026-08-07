@@ -150,9 +150,8 @@ const About = () => {
 
                     <p className={styles.paragraph}>
                         Much of my life revolves around church and friends—often
-                        basketball, dinners, video games or saying yes to
-                        wherever people are going. The photos here are from the
-                        Philippines, Paris, and a friend&apos;s home.
+                        basketball, dinners, video games, or saying yes to
+                        wherever people are going.
                     </p>
 
                     <h2 className={styles.heading2}>What Am I Looking For?</h2>
