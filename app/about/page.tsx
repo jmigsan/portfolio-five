@@ -57,61 +57,124 @@ const About = () => {
                 <div className='md:w-1/2'>
                     <h1 className={styles.heading1}>About Me</h1>
                     <p className={styles.paragraph}>
-                        I&apos;m a Computer Science graduate from Queen Mary
-                        University of London who builds end-to-end products that
-                        solve real problems. I love taking on technical
-                        challenges that don&apos;t have obvious solutions and
-                        turning them into working systems that people actually
-                        use.
-                    </p>
-                    <h2 className={styles.heading2}>What I Build</h2>
-
-                    <p className={styles.paragraph}>
-                        I specialize in full-stack development with a focus on
-                        AI and LLM applications. Recently, I fine-tuned a
-                        Qwen3-4B model on medical dialogue data and built a
-                        complete RAG pipeline with vector search across 500+
-                        documents, deploying the entire stack to production.
-                        I&apos;ve also developed a VR language learning
-                        application where users have real-time conversations
-                        with NPCs in 38+ languages, integrating speech
-                        recognition, LLM-powered dialogue generation, and
-                        dynamic narrative systems.
-                    </p>
-                    <p className={styles.paragraph}>
-                        I&apos;m technically adaptable and enjoy learning new
-                        frameworks quickly—whether it&apos;s working with
-                        LangGraph for agent workflows, deploying on GCP and
-                        RunPod, or building with Next.js and React. I care
-                        deeply about user experience and making complex
-                        technology feel simple.
+                        I&apos;m a product-minded software engineer who likes
+                        turning unclear, fiddly workflows into products people
+                        can actually use. I&apos;m also a Computer Science
+                        graduate from Queen Mary University of London. Most
+                        recently, I designed, built, deployed and supported{" "}
+                        <DirectionalLink
+                            href='/projects/hymndeck'
+                            className='font-bold underline underline-offset-4'
+                        >
+                            HymnDeck
+                        </DirectionalLink>
+                        , an AI automation SaaS used by church worship teams.
                     </p>
 
-                    <h2 className={styles.heading2}>Real-World Impact</h2>
+                    <h2 className={styles.heading2}>Why Do I Build?</h2>
 
                     <p className={styles.paragraph}>
-                        One of my most satisfying projects was a Python
-                        automation tool that reduced a repetitive 2-hour task to
-                        15 minutes. Seeing my team adopt it immediately and use
-                        it every week showed me the value of solving friction
-                        points that people face daily. I&apos;ve also managed
-                        technical infrastructure for live events with 1,000+
-                        concurrent viewers, where there&apos;s no room for error
-                        and real-time problem-solving is essential.
+                        The best part of building something is watching someone
+                        use it. Code, infrastructure and product decisions are
+                        all ways of getting there. That probably connects to the
+                        role I play outside work too: when something technical
+                        breaks, I&apos;m usually the person friends ask to fix
+                        it.
+                    </p>
+
+                    <h2 className={styles.heading2}>What Have I Shipped?</h2>
+
+                    <p className={styles.paragraph}>
+                        I owned HymnDeck end to end: customer research, product
+                        decisions, frontend, backend, AI orchestration, billing,
+                        cloud infrastructure, deployment and production
+                        support. At its peak, two churches used it every week.
+                        One still uses it to prepare Sunday services, reducing a
+                        workflow that could take several hours to around ten
+                        minutes.
                     </p>
 
                     <p className={styles.paragraph}>
-                        I&apos;m excited about working on problems that push
-                        boundaries—especially in AI, automation, and user-facing
-                        products where technology directly improves how people
-                        work or learn.
+                        It runs on Next.js, FastAPI and Postgres, with long AI
+                        jobs handled through Cloud Tasks. Its job state survives
+                        container restarts, duplicate delivery and model
+                        failures. It has stayed in production since April 2026
+                        without manual intervention to keep it alive, at
+                        near-zero running cost.
+                    </p>
+
+                    <h2 className={styles.heading2}>What Did It Teach Me?</h2>
+
+                    <p className={styles.paragraph}>
+                        My first import flow assumed churches worked from one
+                        carefully maintained master presentation. In reality,
+                        they rehearsed from folders of old PowerPoints, so I
+                        rebuilt it around what they actually had. That experience
+                        reinforced something I now try to practise: observe the
+                        workflow before becoming attached to the solution.
                     </p>
 
                     <p className={styles.paragraph}>
-                        <span className='font-bold'>Let&apos;s connect</span> if
-                        you&apos;re working on something interesting and need
-                        someone who can ship quality code, pick up new
-                        technologies quickly, and contribute from day one.
+                        I also built billing, but none of HymnDeck&apos;s users
+                        converted from free to paid. I tested product and
+                        technical risk before properly testing willingness to
+                        pay or distribution. Its engineering depth outran its
+                        commercial validation, and I would sequence those risks
+                        differently now.
+                    </p>
+
+                    <h2 className={styles.heading2}>How Do I Work?</h2>
+
+                    <p className={styles.paragraph}>
+                        I care about doing things properly, sometimes beyond the
+                        point where the extra work matters. Building alone has
+                        taught me that quality is not the same as perfecting
+                        everything: it also means deciding what deserves care,
+                        what needs feedback and what simply needs to ship.
+                    </p>
+
+                    <p className={styles.paragraph}>
+                        I&apos;m early in my career and haven&apos;t yet worked
+                        inside another company&apos;s engineering team. Solo work
+                        taught me ownership and speed, but also where
+                        collaboration pays: reviewing decisions early,
+                        challenging scope and going deeper instead of constantly
+                        switching disciplines. I work best with people who trust
+                        one another enough to disagree openly and change their
+                        minds.
+                    </p>
+
+                    <h2 className={styles.heading2}>
+                        Who Am I Outside Software?
+                    </h2>
+
+                    <p className={styles.paragraph}>
+                        Much of my life revolves around church and friends—often
+                        basketball, dinners, video games or saying yes to
+                        wherever people are going. The photos here are from the
+                        Philippines, Paris, and a friend&apos;s home.
+                    </p>
+
+                    <h2 className={styles.heading2}>What Am I Looking For?</h2>
+
+                    <p className={styles.paragraph}>
+                        Product engineering is my clearest edge, but I&apos;m
+                        open to frontend, backend, infrastructure and adjacent
+                        roles. I&apos;d like to join a team where I can own
+                        meaningful problems, learn from experienced engineers
+                        and keep seeing my work reach the people it was made for.
+                    </p>
+
+                    <p className={styles.paragraph}>
+                        <DirectionalLink
+                            href='/contact'
+                            className='font-bold underline underline-offset-4'
+                        >
+                            Let&apos;s connect
+                        </DirectionalLink>{" "}
+                        if you&apos;re hiring, or if you need someone who can
+                        take an AI or automation idea through product, build,
+                        deployment and the messy part afterwards.
                     </p>
                 </div>
             </div>

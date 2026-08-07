@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "About",
     description:
-        "Learn more about Juan Miguel Sanchez, background in software engineering, product design, and continuous learning.",
+        "Juan Miguel Sanchez is a product-minded software engineer who designed, built and operates HymnDeck, an AI automation SaaS for church teams.",
 };
 
 export default function AboutLayout({
