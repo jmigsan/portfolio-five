@@ -104,7 +104,7 @@ export default function HymnDeckCaseStudy() {
                 className={styles.introMedia}
                 caption='From a plain-language request to an editable, downloadable PowerPoint deck.'
             >
-                <video controls muted playsInline preload='metadata' poster='/hymndeck-demo-poster.webp'>
+                <video autoPlay loop controls muted playsInline preload='metadata' poster='/hymndeck-demo-poster.webp'>
                     <source src='/hymndeck-demo.mp4' type='video/mp4' />
                     Your browser does not support embedded video.
                 </video>

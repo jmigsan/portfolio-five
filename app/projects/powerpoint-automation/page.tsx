@@ -34,7 +34,7 @@ export default function PowerPointAutomationCaseStudy() {
                 wide
                 caption='The packaged desktop workflow used by PowerPoint operators.'
             >
-                <video controls muted playsInline preload='metadata' poster='/ppt-demo-poster.webp'>
+                <video autoPlay loop controls muted playsInline preload='metadata' poster='/ppt-demo-poster.webp'>
                     <source src='/ppt-demo.mp4' type='video/mp4' />
                     Your browser does not support embedded video.
                 </video>
