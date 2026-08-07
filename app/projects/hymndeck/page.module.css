@@ -51,6 +51,24 @@ main.page {
     --label-rotation: 0.4deg;
 }
 
+@media (prefers-color-scheme: dark) {
+    .page .embossedLabel {
+        border-color: rgba(0, 0, 0, 0.16);
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.8), transparent 44%),
+            linear-gradient(180deg, #fffef8 0%, #e8e6df 55%, #f6f4ec 100%);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.9) inset,
+            0 0.18rem 0.38rem rgba(0, 0, 0, 0.42);
+        color: #11110f;
+        text-shadow:
+            0 -1px 0 #fff,
+            0 1px 0 rgba(0, 0, 0, 0.42),
+            1px 0 0 rgba(255, 255, 255, 0.72),
+            -1px 0 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
 .page .hero {
     position: relative;
     width: 100%;
