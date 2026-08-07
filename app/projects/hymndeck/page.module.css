@@ -226,7 +226,7 @@ main.page {
     margin: clamp(5rem, 12vw, 9rem) auto;
     padding: clamp(1.5rem, 4vw, 3.2rem);
     border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--hairline));
-    border-radius: 1.4rem;
+    border-radius: 0;
     background: var(--paper);
     box-shadow: 0 1.5rem 4rem rgba(23, 23, 25, 0.08);
 }
@@ -330,7 +330,7 @@ main.page {
 .verdict {
     padding: 0.38rem 0.55rem;
     border: 1px solid currentColor;
-    border-radius: 999px;
+    border-radius: 0;
     text-transform: uppercase;
 }
 
@@ -396,7 +396,7 @@ main.page {
     width: min(calc(100% - 2rem), 74rem);
     margin: clamp(5rem, 12vw, 9rem) auto;
     padding: clamp(1rem, 3vw, 1.5rem);
-    border-radius: 1.5rem;
+    border-radius: 0;
     background: #e4b63b;
     color: #141518;
 }
@@ -405,7 +405,7 @@ main.page {
     min-width: 0;
     padding: clamp(1rem, 2.5vw, 1.75rem);
     border: 1px solid rgba(20, 21, 24, 0.16);
-    border-radius: 0.9rem;
+    border-radius: 0;
     background: rgba(255, 250, 233, 0.48);
 }
 
@@ -447,7 +447,7 @@ main.page {
     overflow: hidden;
     padding: clamp(2rem, 6vw, 5.5rem);
     border: 1px solid rgba(244, 242, 233, 0.25);
-    border-radius: clamp(0.35rem, 1vw, 0.8rem);
+    border-radius: 0;
     background:
         linear-gradient(rgba(255, 255, 255, 0.085) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.085) 1px, transparent 1px),
@@ -664,7 +664,7 @@ main.page {
     justify-content: center;
     padding: 1.15rem 0.9rem 0.85rem;
     border: 1px solid rgba(244, 242, 233, 0.72);
-    border-radius: 0.12rem;
+    border-radius: 0;
     background: rgba(10, 55, 120, 0.76);
     box-shadow: 0.5rem 0.65rem 1.5rem rgba(6, 32, 75, 0.12);
 }
@@ -1058,7 +1058,7 @@ main.page {
     width: min(calc(100% - 1rem), 78rem);
     margin: clamp(7rem, 16vw, 12rem) auto;
     padding: clamp(2rem, 6vw, 5.5rem);
-    border-radius: clamp(1rem, 3vw, 2.25rem);
+    border-radius: 0;
     background: #15130d;
     color: #f7f4e9;
 }
@@ -1120,7 +1120,7 @@ main.page {
     margin: clamp(7rem, 16vw, 12rem) auto 4rem;
     padding: clamp(2rem, 6vw, 5rem);
     border: 1px solid var(--hairline);
-    border-radius: 1.5rem;
+    border-radius: 0;
     background: color-mix(in srgb, var(--blue) 5%, var(--paper));
 }
 
@@ -1166,7 +1166,7 @@ main.page {
     min-height: 9rem;
     padding: 1.3rem;
     border: 1px solid var(--hairline);
-    border-radius: 0.8rem;
+    border-radius: 0;
     background: var(--paper);
     color: var(--ink);
     font-family: var(--font-nacelle-black);
