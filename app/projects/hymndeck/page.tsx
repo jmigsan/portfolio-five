@@ -192,14 +192,14 @@ export default function HymnDeckCaseStudy() {
 
                 <aside className={styles.impactRail} aria-label='Workflow impact'>
                     <div>
-                        <span className={styles.impactNumber}>1–3</span>
-                        <span className={styles.impactLabel}>hours before</span>
+                        <span className={styles.impactNumber}>1-3 hrs</span>
+                        <span className={styles.impactLabel}>old workflow</span>
                     </div>
                     <span className={styles.impactArrow} aria-hidden='true'>
                         →
                     </span>
                     <div>
-                        <span className={styles.impactNumber}>minutes</span>
+                        <span className={styles.impactNumber}>10 mins</span>
                         <span className={styles.impactLabel}>with HymnDeck</span>
                     </div>
                     <p>

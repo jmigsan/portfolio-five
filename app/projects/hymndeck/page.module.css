@@ -238,7 +238,7 @@ main.page {
 
 .impactNumber {
     font-family: var(--font-nacelle-black);
-    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     letter-spacing: -0.06em;
     line-height: 0.86;
 }
