@@ -204,7 +204,7 @@ main.page {
     gap: 0.7rem;
     padding: 0.9rem 1.15rem;
     border: 1px solid #e7bb44;
-    border-radius: 999px;
+    border-radius: 0;
     background: #e7bb44;
     color: #111522;
     text-decoration: none;
