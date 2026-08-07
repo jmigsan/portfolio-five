@@ -143,7 +143,11 @@ export default function HymnDeckCaseStudy() {
                     id='problem'
                     className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
-                    <p className={shared.sectionLabel}>The problem</p>
+                    <p
+                        className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltLeft}`}
+                    >
+                        The problem
+                    </p>
                     <h2>The capable person gets every job</h2>
                     <p>
                         The person I built for is a worship leader at a church of
@@ -210,7 +214,11 @@ export default function HymnDeckCaseStudy() {
 
                 <section className={styles.assumptionsSection}>
                     <div className={styles.sectionIntro}>
-                        <p className={shared.sectionLabel}>Assumptions tested</p>
+                        <p
+                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltRight}`}
+                        >
+                            Assumptions tested
+                        </p>
                         <h2>Reality edited the roadmap</h2>
                         <p>
                             The useful discoveries were not all confirmations.
@@ -243,7 +251,11 @@ export default function HymnDeckCaseStudy() {
                     id='product'
                     className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
-                    <p className={shared.sectionLabel}>Product decisions</p>
+                    <p
+                        className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                    >
+                        Product decisions
+                    </p>
                     <h2>Automate the expensive part. Keep humans in control.</h2>
                     <p>
                         I started with song-sheet-to-PowerPoint because every user
@@ -346,7 +358,11 @@ export default function HymnDeckCaseStudy() {
                     className={`${styles.architectureSection} ${styles.sectionAnchor}`}
                 >
                     <div className={styles.architectureCopy}>
-                        <p className={styles.inverseLabel}>Architecture</p>
+                        <p
+                            className={`${styles.inverseLabel} ${styles.embossedLabel} ${styles.tiltSoftRight}`}
+                        >
+                            Architecture
+                        </p>
                         <h2>Serverless by constraint, not by slogan</h2>
                         <p>
                             A Turborepo monorepo pairs a Next.js frontend with a
@@ -453,7 +469,9 @@ export default function HymnDeckCaseStudy() {
                     className={`${styles.engineeringSection} ${styles.sectionAnchor}`}
                 >
                     <div className={styles.sectionIntro}>
-                        <p className={shared.sectionLabel}>
+                        <p
+                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltRight}`}
+                        >
                             Three engineering problems
                         </p>
                         <h2>The parts worth writing about</h2>
@@ -467,7 +485,9 @@ export default function HymnDeckCaseStudy() {
                     <article className={styles.challenge}>
                         <div className={styles.challengeNumber}>01</div>
                         <div className={styles.challengeBody}>
-                            <p className={styles.challengeKicker}>
+                            <p
+                                className={`${styles.challengeKicker} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                            >
                                 Constrained AI
                             </p>
                             <h3>
@@ -514,7 +534,9 @@ export default function HymnDeckCaseStudy() {
                     <article className={styles.challenge}>
                         <div className={styles.challengeNumber}>02</div>
                         <div className={styles.challengeBody}>
-                            <p className={styles.challengeKicker}>
+                            <p
+                                className={`${styles.challengeKicker} ${styles.embossedLabel} ${styles.tiltLeft}`}
+                            >
                                 Real-world files
                             </p>
                             <h3>Ingest messy PowerPoint libraries in Cloud Run</h3>
@@ -546,7 +568,11 @@ export default function HymnDeckCaseStudy() {
                     <article className={styles.challenge}>
                         <div className={styles.challengeNumber}>03</div>
                         <div className={styles.challengeBody}>
-                            <p className={styles.challengeKicker}>Durable work</p>
+                            <p
+                                className={`${styles.challengeKicker} ${styles.embossedLabel} ${styles.tiltSoftRight}`}
+                            >
+                                Durable work
+                            </p>
                             <h3>Build background jobs that survive failure</h3>
                             <p className={styles.challengeLead}>
                                 AI generation is too slow and failure-prone to live
@@ -574,7 +600,9 @@ export default function HymnDeckCaseStudy() {
 
                 <section className={styles.operationsSection}>
                     <div className={styles.operationCard}>
-                        <p className={shared.sectionLabel}>
+                        <p
+                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                        >
                             Other people’s content
                         </p>
                         <h2>Hold little. Invent nothing.</h2>
@@ -596,7 +624,11 @@ export default function HymnDeckCaseStudy() {
                         </p>
                     </div>
                     <div className={styles.operationCard}>
-                        <p className={shared.sectionLabel}>Production work</p>
+                        <p
+                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltRight}`}
+                        >
+                            Production work
+                        </p>
                         <h2>The work nobody demos</h2>
                         <p>
                             Two Cloud Run services are deployed separately, with
@@ -622,7 +654,11 @@ export default function HymnDeckCaseStudy() {
                     className={`${styles.resultsSection} ${styles.sectionAnchor}`}
                 >
                     <div className={styles.resultsHeader}>
-                        <p className={styles.inverseLabel}>Results, honestly</p>
+                        <p
+                            className={`${styles.inverseLabel} ${styles.embossedLabel} ${styles.tiltLeft}`}
+                        >
+                            Results, honestly
+                        </p>
                         <h2>Useful product. Real users. No commercial traction.</h2>
                     </div>
                     <div className={styles.resultsGrid}>
@@ -666,7 +702,11 @@ export default function HymnDeckCaseStudy() {
                     id='lessons'
                     className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
-                    <p className={shared.sectionLabel}>What I would do differently</p>
+                    <p
+                        className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltSoftRight}`}
+                    >
+                        What I would do differently
+                    </p>
                     <h2>Review the intent, not only the code</h2>
                     <p>
                         I built HymnDeck largely through agentic coding. The
@@ -698,7 +738,11 @@ export default function HymnDeckCaseStudy() {
                 </section>
 
                 <section className={styles.closingSection}>
-                    <p className={styles.closingKicker}>What this is evidence of</p>
+                    <p
+                        className={`${styles.closingKicker} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                    >
+                        What this is evidence of
+                    </p>
                     <h2>
                         I know what shipping costs because I have owned what
                         happened after launch.
