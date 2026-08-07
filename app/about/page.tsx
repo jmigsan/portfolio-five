@@ -16,7 +16,7 @@ const About = () => {
                 </LinkWrapper>
             </div>
             <div className='flex md:flex-row flex-col-reverse'>
-                <div className='md:w-1/2 flex flex-col items-center justify-center relative mt-10 md:mt-0'>
+                <div className='md:w-1/2 flex flex-col items-center justify-center md:justify-start relative mt-10 md:mt-0'>
                     {[polaroid1, polaroid2, polaroid3].map((image, i) => (
                         <motion.div
                             key={i}
