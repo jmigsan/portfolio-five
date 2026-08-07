@@ -11,7 +11,6 @@ const AttributionModal = dynamic(() => import("./components/AttributionModal"), 
 
 const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isVideoReady, setIsVideoReady] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
@@ -20,8 +19,7 @@ const Home = () => {
         <div className='isolate flex-1 flex flex-col p-12 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
             <div
                 aria-hidden='true'
-                className='pointer-events-none fixed inset-0 z-0 bg-cover bg-[position:center_74%]'
-                style={{ backgroundImage: "url('/road-poster.webp')" }}
+                className='pointer-events-none fixed inset-0 z-0 bg-[#849dbd]'
             >
                 <video
                     autoPlay
@@ -29,11 +27,9 @@ const Home = () => {
                     loop
                     muted
                     playsInline
+                    poster='/road-poster.webp'
                     preload='metadata'
-                    onLoadedData={() => setIsVideoReady(true)}
-                    className={`h-full w-full object-cover object-[center_74%] transition-opacity duration-200 motion-reduce:transition-none ${
-                        isVideoReady ? "opacity-100" : "opacity-0"
-                    }`}
+                    className='h-full w-full object-cover object-[center_74%]'
                 >
                     <source src='/road.webm' type='video/webm' />
                     <source src='/road.mp4' type='video/mp4' />
