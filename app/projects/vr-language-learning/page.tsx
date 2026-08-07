@@ -58,7 +58,11 @@ export default function VrLanguageLearningCaseStudy() {
                 </ProjectFacts>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>The interaction</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltRight}`}
+                    >
+                        The interaction
+                    </p>
                     <h2>Practice a language inside a situation</h2>
                     <p>
                         The learner speaks to an NPC rather than selecting a fixed
@@ -75,7 +79,11 @@ export default function VrLanguageLearningCaseStudy() {
                 </section>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>Orchestration</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltSoftLeft}`}
+                    >
+                        Orchestration
+                    </p>
                     <h2>A narrative that remembers where it is going</h2>
                     <p>
                         LangGraph coordinates the dynamic narrative, Gemini provides
@@ -93,7 +101,11 @@ export default function VrLanguageLearningCaseStudy() {
                 </section>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>Next questions</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltSoftRight}`}
+                    >
+                        Next questions
+                    </p>
                     <h2>Measure learning, not novelty</h2>
                     <p>
                         A future version of this case study should document the

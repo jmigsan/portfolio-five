@@ -144,7 +144,7 @@ export default function HymnDeckCaseStudy() {
                     className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
                     <p
-                        className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltLeft}`}
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltLeft}`}
                     >
                         The problem
                     </p>
@@ -215,7 +215,7 @@ export default function HymnDeckCaseStudy() {
                 <section className={styles.assumptionsSection}>
                     <div className={styles.sectionIntro}>
                         <p
-                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltRight}`}
+                            className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltRight}`}
                         >
                             Assumptions tested
                         </p>
@@ -252,7 +252,7 @@ export default function HymnDeckCaseStudy() {
                     className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
                     <p
-                        className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltSoftLeft}`}
                     >
                         Product decisions
                     </p>
@@ -359,7 +359,7 @@ export default function HymnDeckCaseStudy() {
                 >
                     <div className={styles.architectureCopy}>
                         <p
-                            className={`${styles.inverseLabel} ${styles.embossedLabel} ${styles.tiltSoftRight}`}
+                            className={`${styles.inverseLabel} ${shared.embossedLabel} ${shared.tiltSoftRight}`}
                         >
                             Architecture
                         </p>
@@ -470,7 +470,7 @@ export default function HymnDeckCaseStudy() {
                 >
                     <div className={styles.sectionIntro}>
                         <p
-                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltRight}`}
+                            className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltRight}`}
                         >
                             Three engineering problems
                         </p>
@@ -486,7 +486,7 @@ export default function HymnDeckCaseStudy() {
                         <div className={styles.challengeNumber}>01</div>
                         <div className={styles.challengeBody}>
                             <p
-                                className={`${styles.challengeKicker} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                                className={`${styles.challengeKicker} ${shared.embossedLabel} ${shared.tiltSoftLeft}`}
                             >
                                 Constrained AI
                             </p>
@@ -535,7 +535,7 @@ export default function HymnDeckCaseStudy() {
                         <div className={styles.challengeNumber}>02</div>
                         <div className={styles.challengeBody}>
                             <p
-                                className={`${styles.challengeKicker} ${styles.embossedLabel} ${styles.tiltLeft}`}
+                                className={`${styles.challengeKicker} ${shared.embossedLabel} ${shared.tiltLeft}`}
                             >
                                 Real-world files
                             </p>
@@ -569,7 +569,7 @@ export default function HymnDeckCaseStudy() {
                         <div className={styles.challengeNumber}>03</div>
                         <div className={styles.challengeBody}>
                             <p
-                                className={`${styles.challengeKicker} ${styles.embossedLabel} ${styles.tiltSoftRight}`}
+                                className={`${styles.challengeKicker} ${shared.embossedLabel} ${shared.tiltSoftRight}`}
                             >
                                 Durable work
                             </p>
@@ -601,7 +601,7 @@ export default function HymnDeckCaseStudy() {
                 <section className={styles.operationsSection}>
                     <div className={styles.operationCard}>
                         <p
-                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                            className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltSoftLeft}`}
                         >
                             Other people’s content
                         </p>
@@ -625,7 +625,7 @@ export default function HymnDeckCaseStudy() {
                     </div>
                     <div className={styles.operationCard}>
                         <p
-                            className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltRight}`}
+                            className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltRight}`}
                         >
                             Production work
                         </p>
@@ -655,7 +655,7 @@ export default function HymnDeckCaseStudy() {
                 >
                     <div className={styles.resultsHeader}>
                         <p
-                            className={`${styles.inverseLabel} ${styles.embossedLabel} ${styles.tiltLeft}`}
+                            className={`${styles.inverseLabel} ${shared.embossedLabel} ${shared.tiltLeft}`}
                         >
                             Results, honestly
                         </p>
@@ -703,7 +703,7 @@ export default function HymnDeckCaseStudy() {
                     className={`${shared.section} ${shared.readingColumn} ${styles.sectionAnchor}`}
                 >
                     <p
-                        className={`${shared.sectionLabel} ${styles.embossedLabel} ${styles.tiltSoftRight}`}
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltSoftRight}`}
                     >
                         What I would do differently
                     </p>
@@ -739,7 +739,7 @@ export default function HymnDeckCaseStudy() {
 
                 <section className={styles.closingSection}>
                     <p
-                        className={`${styles.closingKicker} ${styles.embossedLabel} ${styles.tiltSoftLeft}`}
+                        className={`${styles.closingKicker} ${shared.embossedLabel} ${shared.tiltSoftLeft}`}
                     >
                         What this is evidence of
                     </p>

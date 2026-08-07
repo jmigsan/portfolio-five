@@ -58,7 +58,11 @@ export default function PowerPointAutomationCaseStudy() {
                 </ProjectFacts>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>The opportunity</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltSoftRight}`}
+                    >
+                        The opportunity
+                    </p>
                     <h2>Automate the repetition, preserve the judgement</h2>
                     <p>
                         The weekly slide-preparation process contained a large amount
@@ -76,7 +80,11 @@ export default function PowerPointAutomationCaseStudy() {
                 </section>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>Adoption</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltLeft}`}
+                    >
+                        Adoption
+                    </p>
                     <h2>Packaging was part of the product</h2>
                     <p>
                         The application was packaged with PyInstaller and Inno Setup
@@ -92,7 +100,11 @@ export default function PowerPointAutomationCaseStudy() {
                 </section>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>What followed</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltRight}`}
+                    >
+                        What followed
+                    </p>
                     <h2>The prototype created the roadmap</h2>
                     <p>
                         Real use revealed what the next version needed: easier

@@ -63,7 +63,11 @@ export default function HouseMdChatbotCaseStudy() {
                 </ProjectFacts>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>The experiment</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltLeft}`}
+                    >
+                        The experiment
+                    </p>
                     <h2>What changes when you own the model layer?</h2>
                     <p>
                         I wanted to understand the work hidden beneath a polished
@@ -80,7 +84,11 @@ export default function HouseMdChatbotCaseStudy() {
                 </section>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>Retrieval</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltRight}`}
+                    >
+                        Retrieval
+                    </p>
                     <h2>Give the model context it was never trained to recall</h2>
                     <p>
                         I processed and vectorised more than 500 medical Wikipedia
@@ -96,7 +104,11 @@ export default function HouseMdChatbotCaseStudy() {
                 </section>
 
                 <section className={shared.section}>
-                    <p className={shared.sectionLabel}>Delivery</p>
+                    <p
+                        className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltSoftLeft}`}
+                    >
+                        Delivery
+                    </p>
                     <h2>A model is only one part of the product</h2>
                     <p>
                         The Next.js frontend runs on Vercel, the FastAPI backend on
