@@ -374,47 +374,164 @@ export default function HymnDeckCaseStudy() {
                     </div>
 
                     <div
-                        className={styles.systemMap}
+                        className={styles.blueprintSheet}
                         role='img'
-                        aria-label='HymnDeck system architecture: a church user interacts with the Next.js web application, which connects to Firebase authentication, Google Drive and a FastAPI service. The API uses Neon, Cloud Storage, PowerPoint processing, OpenRouter and Lemon Squeezy, and sends long jobs through Cloud Tasks to a private worker.'
+                        aria-label='HymnDeck system architecture. A church team signs in and supplies source documents through a Next.js application. FastAPI verifies the user and returns quickly while long-running generation work continues through Cloud Tasks and a private Cloud Run worker. The worker uses Neon, Cloud Storage, OpenRouter and PowerPoint processing to create a downloadable PowerPoint deck.'
                     >
-                        <div className={`${styles.systemNode} ${styles.userNode}`}>
-                            <span>USER</span>
-                            <strong>Church team</strong>
+                        <div className={styles.blueprintHeader} aria-hidden='true'>
+                            <span>HymnDeck / system anatomy</span>
+                            <span>HD-ARCH-04</span>
+                            <span>Rev. 03</span>
                         </div>
-                        <span className={styles.mapArrow} aria-hidden='true'>→</span>
-                        <div className={`${styles.systemNode} ${styles.webNode}`}>
-                            <span>WEB</span>
-                            <strong>Next.js 16</strong>
-                            <small>React 19 · TypeScript</small>
+
+                        <div className={styles.blueprintCanvas}>
+                            <div className={styles.cloudBoundary} aria-hidden='true'>
+                                <span>Google Cloud / runtime boundary</span>
+                            </div>
+
+                            <svg
+                                className={styles.blueprintWiring}
+                                viewBox='0 0 1200 720'
+                                preserveAspectRatio='none'
+                                aria-hidden='true'
+                            >
+                                <defs>
+                                    <marker
+                                        id='blueprint-arrow-white'
+                                        viewBox='0 0 10 10'
+                                        refX='8'
+                                        refY='5'
+                                        markerWidth='6'
+                                        markerHeight='6'
+                                        orient='auto-start-reverse'
+                                    >
+                                        <path d='M 0 0 L 10 5 L 0 10 z' fill='#f4f2e9' />
+                                    </marker>
+                                    <marker
+                                        id='blueprint-arrow-gold'
+                                        viewBox='0 0 10 10'
+                                        refX='8'
+                                        refY='5'
+                                        markerWidth='6'
+                                        markerHeight='6'
+                                        orient='auto-start-reverse'
+                                    >
+                                        <path d='M 0 0 L 10 5 L 0 10 z' fill='#f2c450' />
+                                    </marker>
+                                </defs>
+
+                                <path className={styles.requestWire} d='M 144 165 C 180 165 170 238 218 238' />
+                                <path className={styles.requestWire} d='M 390 245 C 424 245 415 172 456 172' />
+                                <path className={styles.asyncWire} d='M 625 210 C 654 254 642 338 682 366' />
+                                <path className={styles.asyncWire} d='M 810 400 C 842 400 836 332 872 332' />
+                                <path className={styles.outputWire} d='M 1037 379 C 1078 404 1048 491 1080 518' />
+                                <path className={styles.returnWire} d='M 1128 594 C 1114 676 379 686 316 318' />
+
+                                <path className={styles.serviceWire} d='M 144 435 C 178 414 212 350 249 303' />
+                                <path className={styles.serviceWire} d='M 333 554 C 332 475 335 348 331 306' />
+                                <path className={styles.serviceWire} d='M 558 74 L 558 106' />
+                                <path className={styles.serviceWire} d='M 642 112 C 650 196 721 240 743 338' />
+                                <path className={styles.serviceWire} d='M 893 117 C 903 180 938 231 951 286' />
+                                <path className={styles.optionalWire} d='M 1033 176 C 1014 214 1001 252 985 287' />
+                                <path className={styles.serviceWire} d='M 505 604 C 521 493 520 320 532 222' />
+                            </svg>
+
+                            <ol className={styles.blueprintRoute}>
+                                <li className={`${styles.blueprintStage} ${styles.stageUser}`}>
+                                    <span className={styles.stageNumber}>01</span>
+                                    <span className={styles.stageKind}>Input</span>
+                                    <strong>Church team</strong>
+                                    <small>Lyrics, documents and design intent</small>
+                                    <em>start with what they already use</em>
+                                </li>
+                                <li className={`${styles.blueprintStage} ${styles.stageWeb}`}>
+                                    <span className={styles.stageNumber}>02</span>
+                                    <span className={styles.stageKind}>Control surface</span>
+                                    <strong>Next.js 16</strong>
+                                    <small>React 19 / TypeScript / Zustand</small>
+                                    <em>sign in + review visually</em>
+                                </li>
+                                <li className={`${styles.blueprintStage} ${styles.stageApi}`}>
+                                    <span className={styles.stageNumber}>03</span>
+                                    <span className={styles.stageKind}>Public service</span>
+                                    <strong>FastAPI</strong>
+                                    <small>Cloud Run / Python / Uvicorn</small>
+                                    <em>validate, persist, respond</em>
+                                </li>
+                                <li className={`${styles.blueprintStage} ${styles.stageTasks}`}>
+                                    <span className={styles.stageNumber}>04</span>
+                                    <span className={styles.stageKind}>Queue</span>
+                                    <strong>Cloud Tasks</strong>
+                                    <small>Authenticated task delivery</small>
+                                    <em>the request can end here</em>
+                                </li>
+                                <li className={`${styles.blueprintStage} ${styles.stageWorker}`}>
+                                    <span className={styles.stageNumber}>05</span>
+                                    <span className={styles.stageKind}>Private service</span>
+                                    <strong>Agent worker</strong>
+                                    <small>AI orchestration + document tooling</small>
+                                    <em>no public ingress</em>
+                                </li>
+                                <li className={`${styles.blueprintStage} ${styles.stageDeck}`}>
+                                    <span className={styles.stageNumber}>06</span>
+                                    <span className={styles.stageKind}>Output</span>
+                                    <strong>.pptx deck</strong>
+                                    <small>python-pptx / LibreOffice / Poppler</small>
+                                    <em>back in the familiar workflow</em>
+                                </li>
+                            </ol>
+
+                            <div className={styles.blueprintServices} aria-label='Supporting systems'>
+                                <div className={`${styles.systemNote} ${styles.noteDrive}`}>
+                                    <span>Source material</span>
+                                    <strong>Google Drive + Docs</strong>
+                                    <small>OAuth / Picker API</small>
+                                </div>
+                                <div className={`${styles.systemNote} ${styles.noteFirebase}`}>
+                                    <span>Identity</span>
+                                    <strong>Firebase Auth</strong>
+                                    <small>token issued + verified</small>
+                                </div>
+                                <div className={`${styles.systemNote} ${styles.noteDatabase}`}>
+                                    <span>Shared state</span>
+                                    <strong>Neon Postgres</strong>
+                                    <small>SQLAlchemy async</small>
+                                </div>
+                                <div className={`${styles.systemNote} ${styles.noteStorage}`}>
+                                    <span>Large files</span>
+                                    <strong>Cloud Storage</strong>
+                                    <small>uploads + generated assets</small>
+                                </div>
+                                <div className={`${styles.systemNote} ${styles.noteAi}`}>
+                                    <span>Model gateway</span>
+                                    <strong>OpenRouter</strong>
+                                    <small>Gemini / MiniMax / configured models</small>
+                                </div>
+                                <div className={`${styles.systemNote} ${styles.notePexels}`}>
+                                    <span>Optional</span>
+                                    <strong>Pexels</strong>
+                                    <small>stock imagery</small>
+                                </div>
+                                <div className={`${styles.systemNote} ${styles.noteBilling}`}>
+                                    <span>Commercial</span>
+                                    <strong>Lemon Squeezy</strong>
+                                    <small>checkout + subscriptions</small>
+                                </div>
+                            </div>
+
+                            <p className={styles.splitAnnotation} aria-hidden='true'>
+                                long work leaves<br />the request path
+                            </p>
+                            <p className={styles.returnAnnotation} aria-hidden='true'>
+                                07 / poll status, preview, download
+                            </p>
                         </div>
-                        <span className={styles.mapArrow} aria-hidden='true'>→</span>
-                        <div className={`${styles.systemNode} ${styles.apiNode}`}>
-                            <span>PUBLIC SERVICE</span>
-                            <strong>FastAPI</strong>
-                            <small>Cloud Run · Docker</small>
-                        </div>
-                        <span className={styles.mapArrow} aria-hidden='true'>→</span>
-                        <div className={`${styles.systemNode} ${styles.taskNode}`}>
-                            <span>QUEUE</span>
-                            <strong>Cloud Tasks</strong>
-                            <small>Authenticated delivery</small>
-                        </div>
-                        <span className={styles.mapArrow} aria-hidden='true'>→</span>
-                        <div className={`${styles.systemNode} ${styles.workerNode}`}>
-                            <span>PRIVATE SERVICE</span>
-                            <strong>AI worker</strong>
-                            <small>Durable agent jobs</small>
-                        </div>
-                        <div className={styles.serviceRow}>
-                            <div>Firebase Auth</div>
-                            <div>Google Drive</div>
-                            <div>Neon Postgres</div>
-                            <div>Cloud Storage</div>
-                            <div>OpenRouter</div>
-                            <div>PowerPoint tools</div>
-                            <div>Pexels</div>
-                            <div>Lemon Squeezy</div>
+
+                        <div className={styles.blueprintLegend} aria-hidden='true'>
+                            <span><i className={styles.legendRequest} /> direct request</span>
+                            <span><i className={styles.legendAsync} /> queued work</span>
+                            <span><i className={styles.legendOptional} /> optional integration</span>
+                            <b>Measured for real weekly use</b>
                         </div>
                     </div>
 

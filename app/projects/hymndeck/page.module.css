@@ -446,14 +446,20 @@ main.page {
     margin: clamp(7rem, 16vw, 12rem) auto;
     overflow: hidden;
     padding: clamp(2rem, 6vw, 5.5rem);
-    border-radius: clamp(1rem, 3vw, 2.25rem);
+    border: 1px solid rgba(244, 242, 233, 0.25);
+    border-radius: clamp(0.35rem, 1vw, 0.8rem);
     background:
-        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-        #101525;
-    background-size: 4rem 4rem;
+        linear-gradient(rgba(255, 255, 255, 0.085) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.085) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        #144b96;
+    background-position: -1px -1px;
+    background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem, auto;
     color: #f4f2e9;
-    box-shadow: 0 2rem 5rem rgba(11, 14, 25, 0.22);
+    box-shadow:
+        inset 0 0 5rem rgba(6, 28, 75, 0.22),
+        0 2rem 5rem rgba(11, 14, 25, 0.22);
 }
 
 .architectureCopy {
@@ -494,74 +500,418 @@ main.page {
     line-height: 1.7;
 }
 
-.systemMap {
-    display: grid;
-    grid-template-columns: 0.75fr auto 1fr auto 1fr auto 1fr auto 1fr;
-    align-items: stretch;
-    gap: 0.6rem;
+.blueprintSheet {
+    position: relative;
     margin: clamp(3.5rem, 8vw, 6rem) 0 2rem;
+    padding: clamp(0.8rem, 2vw, 1.35rem);
+    border: 1px solid rgba(244, 242, 233, 0.66);
+    background: rgba(6, 38, 94, 0.16);
+    box-shadow:
+        inset 0 0 0 0.25rem rgba(244, 242, 233, 0.035),
+        inset 0 0 3rem rgba(7, 35, 81, 0.16);
+    isolation: isolate;
 }
 
-.systemNode {
+.blueprintSheet::before,
+.blueprintSheet::after {
+    position: absolute;
+    z-index: 5;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-color: rgba(244, 242, 233, 0.72);
+    content: "";
+    pointer-events: none;
+}
+
+.blueprintSheet::before {
+    top: 0.45rem;
+    left: 0.45rem;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.blueprintSheet::after {
+    right: 0.45rem;
+    bottom: 0.45rem;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.blueprintHeader,
+.blueprintLegend {
+    position: relative;
+    z-index: 4;
     display: flex;
-    min-height: 9.5rem;
-    min-width: 0;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 1rem;
-    border: 1px solid rgba(244, 242, 233, 0.18);
-    border-radius: 0.8rem;
-    background: rgba(255, 255, 255, 0.055);
-}
-
-.systemNode > span {
-    margin-bottom: auto;
-    color: #e4b63b;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(244, 242, 233, 0.74);
     font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-    font-size: 0.56rem;
+    font-size: 0.58rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
 }
 
-.systemNode strong {
+.blueprintHeader {
+    padding: 0.2rem 0.55rem 0.8rem;
+    border-bottom: 1px solid rgba(244, 242, 233, 0.42);
+}
+
+.blueprintHeader span:first-child {
+    margin-right: auto;
+}
+
+.blueprintCanvas {
+    position: relative;
+    min-height: clamp(39rem, 58vw, 46rem);
+}
+
+.cloudBoundary {
+    position: absolute;
+    z-index: -1;
+    top: 11.5%;
+    right: 9%;
+    bottom: 12%;
+    left: 35%;
+    border: 1px dashed rgba(244, 242, 233, 0.34);
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.cloudBoundary::before {
+    position: absolute;
+    inset: 0.35rem -0.25rem -0.3rem 0.3rem;
+    border: 1px dashed rgba(244, 242, 233, 0.12);
+    content: "";
+    transform: rotate(-0.2deg);
+}
+
+.cloudBoundary span {
+    position: absolute;
+    top: -0.7rem;
+    left: 1rem;
+    padding: 0 0.45rem;
+    background: #144b96;
+    color: rgba(244, 242, 233, 0.63);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.52rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.blueprintWiring {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.blueprintWiring > path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.requestWire,
+.outputWire {
+    stroke: rgba(244, 242, 233, 0.82);
+    stroke-width: 1.6;
+    marker-end: url("#blueprint-arrow-white");
+}
+
+.asyncWire {
+    stroke: #f2c450;
+    stroke-width: 2;
+    stroke-dasharray: 8 7;
+    marker-end: url("#blueprint-arrow-gold");
+}
+
+.returnWire {
+    stroke: rgba(244, 242, 233, 0.48);
+    stroke-width: 1.2;
+    stroke-dasharray: 3 8;
+    marker-end: url("#blueprint-arrow-white");
+}
+
+.serviceWire,
+.optionalWire {
+    stroke: rgba(244, 242, 233, 0.3);
+    stroke-width: 1;
+}
+
+.optionalWire {
+    stroke-dasharray: 2 7;
+}
+
+.blueprintRoute,
+.blueprintServices {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.blueprintStage {
+    position: absolute;
+    display: flex;
+    min-height: 7.6rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.15rem 0.9rem 0.85rem;
+    border: 1px solid rgba(244, 242, 233, 0.72);
+    border-radius: 0.12rem;
+    background: rgba(10, 55, 120, 0.76);
+    box-shadow: 0.5rem 0.65rem 1.5rem rgba(6, 32, 75, 0.12);
+}
+
+.blueprintStage::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0.24rem -0.25rem -0.22rem 0.2rem;
+    border: 1px solid rgba(244, 242, 233, 0.25);
+    content: "";
+    transform: rotate(0.8deg);
+}
+
+.stageNumber {
+    position: absolute;
+    top: -1.35rem;
+    left: -0.15rem;
+    color: #f2c450;
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.stageKind,
+.systemNote > span {
+    color: #f2c450;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.49rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.blueprintStage strong {
+    margin-top: 0.42rem;
     font-family: var(--font-nacelle-black);
-    font-size: clamp(1rem, 1.8vw, 1.35rem);
-    line-height: 1.05;
+    font-size: clamp(0.95rem, 1.6vw, 1.22rem);
+    line-height: 1;
 }
 
-.systemNode small {
-    margin-top: 0.35rem;
-    color: rgba(244, 242, 233, 0.58);
-    font-size: 0.67rem;
+.blueprintStage small,
+.systemNote small {
+    margin-top: 0.42rem;
+    color: rgba(244, 242, 233, 0.62);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.53rem;
+    line-height: 1.42;
+}
+
+.blueprintStage em {
+    position: absolute;
+    right: 0;
+    bottom: -1.45rem;
+    color: rgba(244, 242, 233, 0.7);
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+    font-size: 0.56rem;
+    font-style: normal;
+    white-space: nowrap;
+    transform: rotate(-2deg);
+}
+
+.stageUser {
+    top: 15%;
+    left: 1%;
+    width: 12%;
+    transform: rotate(-1.2deg);
+}
+
+.stageWeb {
+    top: 27%;
+    left: 18%;
+    width: 16%;
+    transform: rotate(0.7deg);
+}
+
+.stageApi {
+    top: 15%;
+    left: 38%;
+    width: 16%;
+    transform: rotate(-0.6deg);
+}
+
+.stageApi em {
+    right: auto;
+    left: 0;
+}
+
+.stageTasks {
+    top: 46%;
+    left: 57%;
+    width: 13%;
+    transform: rotate(0.9deg);
+}
+
+.stageWorker {
+    top: 37%;
+    left: 73%;
+    width: 16%;
+    border-color: #f2c450;
+    background: rgba(122, 94, 25, 0.2);
+    transform: rotate(-0.8deg);
+}
+
+.stageDeck {
+    top: 68%;
+    right: 0.5%;
+    width: 11%;
+    min-height: 8.4rem;
+    transform: rotate(1.1deg);
+}
+
+.stageDeck::after {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    width: 1.15rem;
+    height: 0.8rem;
+    border: 1px solid rgba(244, 242, 233, 0.5);
+    box-shadow:
+        -0.2rem 0.2rem 0 -1px #144b96,
+        -0.2rem 0.2rem 0 0 rgba(244, 242, 233, 0.3);
+    content: "";
+}
+
+.systemNote {
+    position: absolute;
+    display: flex;
+    width: 14%;
+    flex-direction: column;
+    padding: 0.45rem 0.2rem 0.5rem;
+    border-bottom: 1px solid rgba(244, 242, 233, 0.3);
+}
+
+.systemNote strong {
+    margin-top: 0.26rem;
+    color: rgba(244, 242, 233, 0.9);
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+    font-size: clamp(0.68rem, 1vw, 0.84rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.noteDrive {
+    top: 59%;
+    left: 1%;
+    transform: rotate(-1.2deg);
+}
+
+.noteFirebase {
+    top: 74%;
+    left: 21%;
+    transform: rotate(0.7deg);
+}
+
+.noteDatabase {
+    top: -1.5%;
+    left: 40%;
+    transform: rotate(-0.5deg);
+}
+
+.noteStorage {
+    top: 1%;
+    left: 54%;
+    transform: rotate(0.8deg);
+}
+
+.noteAi {
+    top: 1%;
+    left: 75%;
+    transform: rotate(-0.8deg);
+}
+
+.notePexels {
+    top: 16%;
+    right: 0;
+    width: 10%;
+    transform: rotate(1.2deg);
+}
+
+.noteBilling {
+    top: 84%;
+    left: 40%;
+    transform: rotate(-0.6deg);
+}
+
+.splitAnnotation,
+.returnAnnotation {
+    position: absolute;
+    z-index: 3;
+    margin: 0;
+    color: #f2c450;
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+    font-size: clamp(0.58rem, 1vw, 0.75rem);
     line-height: 1.35;
 }
 
-.mapArrow {
-    align-self: center;
-    color: rgba(244, 242, 233, 0.42);
+.splitAnnotation {
+    top: 31%;
+    left: 55.5%;
+    transform: rotate(-4deg);
 }
 
-.workerNode {
-    border-color: rgba(228, 182, 59, 0.62);
-    background: rgba(228, 182, 59, 0.09);
+.returnAnnotation {
+    right: 17%;
+    bottom: 2.5%;
+    color: rgba(244, 242, 233, 0.66);
+    transform: rotate(1.2deg);
 }
 
-.serviceRow {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.6rem;
-    margin-top: 0.25rem;
+.blueprintLegend {
+    flex-wrap: wrap;
+    padding: 0.85rem 0.55rem 0.15rem;
+    border-top: 1px solid rgba(244, 242, 233, 0.42);
 }
 
-.serviceRow div {
-    padding: 0.75rem;
-    border: 1px dashed rgba(244, 242, 233, 0.18);
-    border-radius: 0.55rem;
-    color: rgba(244, 242, 233, 0.65);
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-    font-size: 0.62rem;
-    text-align: center;
+.blueprintLegend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.blueprintLegend i {
+    display: inline-block;
+    width: 1.8rem;
+    border-top: 1px solid rgba(244, 242, 233, 0.8);
+}
+
+.blueprintLegend .legendAsync {
+    border-color: #f2c450;
+    border-top-style: dashed;
+}
+
+.blueprintLegend .legendOptional {
+    border-top-style: dotted;
+    opacity: 0.65;
+}
+
+.blueprintLegend b {
+    margin-left: auto;
+    color: #f2c450;
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    transform: rotate(-1deg);
 }
 
 .techDetails {
@@ -860,18 +1210,117 @@ main.page {
         display: none;
     }
 
-    .systemMap {
-        grid-template-columns: 1fr;
+    .blueprintCanvas {
+        min-height: 0;
+        padding: 1.5rem 0.5rem 1rem 2.7rem;
     }
 
-    .systemMap > .mapArrow {
-        transform: rotate(90deg);
-        text-align: center;
+    .blueprintWiring,
+    .cloudBoundary,
+    .splitAnnotation,
+    .returnAnnotation {
+        display: none;
     }
 
-    .serviceRow {
-        grid-column: auto;
-        grid-template-columns: repeat(4, 1fr);
+    .blueprintRoute {
+        position: relative;
+        display: grid;
+        gap: 3rem;
+    }
+
+    .blueprintStage {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        width: auto;
+        min-height: 8.5rem;
+        transform: none;
+    }
+
+    .blueprintStage em {
+        right: 0.7rem;
+        left: auto;
+    }
+
+    .stageNumber {
+        top: 0.1rem;
+        left: -2.65rem;
+        display: grid;
+        width: 2rem;
+        height: 2rem;
+        place-items: center;
+        border: 1px solid #f2c450;
+        border-radius: 50%;
+        background: #144b96;
+    }
+
+    .blueprintStage:not(:last-child) .stageNumber::after {
+        position: absolute;
+        z-index: -1;
+        top: 2rem;
+        left: calc(50% - 0.5px);
+        width: 1px;
+        height: 9.75rem;
+        background: repeating-linear-gradient(
+            to bottom,
+            #f2c450 0 0.38rem,
+            transparent 0.38rem 0.7rem
+        );
+        content: "";
+    }
+
+    .stageApi::after {
+        position: absolute;
+        top: -1.65rem;
+        left: 0.25rem;
+        color: rgba(244, 242, 233, 0.58);
+        content: "Google Cloud / runtime ↓";
+        font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+        font-size: 0.48rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .stageApi,
+    .stageTasks,
+    .stageWorker {
+        background: rgba(8, 47, 107, 0.86);
+    }
+
+    .blueprintServices {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.4rem 1.2rem;
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px dashed rgba(244, 242, 233, 0.36);
+    }
+
+    .blueprintServices::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #f2c450;
+        content: "Supporting systems / connection notes";
+        font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+        font-size: 0.5rem;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+    }
+
+    .systemNote,
+    .notePexels {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        width: auto;
+        min-width: 0;
+        transform: none;
     }
 
     .resultsGrid {
@@ -985,8 +1434,17 @@ main.page {
         grid-template-columns: 1fr;
     }
 
-    .serviceRow {
-        grid-template-columns: repeat(2, 1fr);
+    .blueprintHeader span:nth-child(2) {
+        display: none;
+    }
+
+    .blueprintServices {
+        grid-template-columns: 1fr;
+    }
+
+    .blueprintLegend b {
+        width: 100%;
+        margin: 0.35rem 0 0;
     }
 
     .challenge {
