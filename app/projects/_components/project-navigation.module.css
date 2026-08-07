@@ -41,7 +41,7 @@
     height: 2.7rem;
     overflow: hidden;
     border: 1px solid var(--hairline);
-    border-radius: 0.5rem;
+    border-radius: 0;
     background: var(--project-accent);
     isolation: isolate;
     transition:
