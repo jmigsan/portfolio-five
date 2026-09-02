@@ -14,7 +14,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
     title: "HymnDeck | Juan Miguel Sanchez",
     description:
-        "How Juan Miguel Sanchez built and launched a production AI workflow for church worship teams — from customer research to infrastructure and support.",
+        "How Juan Miguel Sanchez built and evolved a production AI workflow for church worship teams across the web and WhatsApp.",
 };
 
 const assumptions = [
@@ -73,13 +73,12 @@ export default function HymnDeckCaseStudy() {
                     </div>
                     <h1>HymnDeck</h1>
                     <p className={styles.heroStatement}>
-                        Building and launching a B2B AI automation SaaS from zero
-                        to production.
+                        Building an AI workflow that meets church teams where they already work.
                     </p>
                     <p className={styles.heroSummary}>
                         Slide generation for people running on empty. HymnDeck
-                        turns the song sheet a small church already writes into
-                        the PowerPoint deck it already uses.
+                        turns a song sheet, document or WhatsApp message into the
+                        PowerPoint deck a small church already uses.
                     </p>
                     <div className={styles.heroActions}>
                         <a
@@ -128,7 +127,7 @@ export default function HymnDeckCaseStudy() {
                             Founder and sole product engineer
                         </ProjectFact>
                         <ProjectFact label='Timeline'>
-                            Core build: 1 March–1 April · iterated after launch
+                            Core build: 1 March–1 April · WhatsApp added in August
                         </ProjectFact>
                         <ProjectFact label='Users'>
                             Two churches weekly at peak
@@ -327,11 +326,64 @@ export default function HymnDeckCaseStudy() {
                     </div>
                 </section>
 
+                <section
+                    id='channels'
+                    className={`${styles.channelSection} ${styles.sectionAnchor}`}
+                >
+                    <div className={styles.channelCopy}>
+                        <p
+                            className={`${shared.sectionLabel} ${shared.embossedLabel} ${shared.tiltRight}`}
+                        >
+                            After launch · WhatsApp
+                        </p>
+                        <h2>Distribution became a product constraint</h2>
+                        <p className={styles.channelLead}>
+                            The web product removed most of the slide-making work, but it still
+                            asked an overloaded worship leader to remember another product.
+                        </p>
+                        <p>
+                            I took the original product principle—fit the workflow already in
+                            place—one step further and brought HymnDeck into WhatsApp. A user can
+                            send lyrics, images or documents, resolve ambiguous song matches in the
+                            conversation, choose a design and receive the finished PowerPoint
+                            without keeping a browser session open.
+                        </p>
+                        <p>
+                            This is not a second generation engine. WhatsApp is a new control
+                            surface over the same source-grounded agent, deck model and organisation
+                            permissions. The web editor remains available when visual control
+                            matters; messaging makes the common path easier to start and delegate.
+                        </p>
+                        <p className={styles.channelCaveat}>
+                            The integration is live, but it is too early to claim it solved
+                            distribution. It turns the lesson from the first launch into a testable
+                            product hypothesis.
+                        </p>
+                    </div>
+
+                    <MediaFrame
+                        className={styles.channelMedia}
+                        caption='A request, progress updates and the finished PowerPoint delivered in the conversation.'
+                    >
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload='metadata'
+                            poster='/hymndeck-whatsapp-demo-poster.webp'
+                        >
+                            <source src='/hymndeck-whatsapp-demo.mp4' type='video/mp4' />
+                            Your browser does not support embedded video.
+                        </video>
+                    </MediaFrame>
+                </section>
+
                 <div className={styles.workflow} aria-label='HymnDeck workflow'>
                     <div>
                         <span>01</span>
                         <strong>Bring the source</strong>
-                        <p>Song sheet, document or PowerPoint library</p>
+                        <p>Paste, upload or send it through WhatsApp</p>
                     </div>
                     <span aria-hidden='true'>→</span>
                     <div>
@@ -342,14 +394,14 @@ export default function HymnDeckCaseStudy() {
                     <span aria-hidden='true'>→</span>
                     <div>
                         <span>03</span>
-                        <strong>Review visually</strong>
-                        <p>Edit lyrics, layout, media and design</p>
+                        <strong>Resolve ambiguity</strong>
+                        <p>Use the visual editor or reply in the conversation</p>
                     </div>
                     <span aria-hidden='true'>→</span>
                     <div>
                         <span>04</span>
-                        <strong>Use the output</strong>
-                        <p>Download the PowerPoint the church already knows</p>
+                        <strong>Receive the deck</strong>
+                        <p>Download it on the web or receive it in WhatsApp</p>
                     </div>
                 </div>
 
@@ -365,23 +417,24 @@ export default function HymnDeckCaseStudy() {
                         </p>
                         <h2>Serverless by constraint, not by slogan</h2>
                         <p>
-                            A Turborepo monorepo pairs a Next.js frontend with a
-                            FastAPI backend in Docker on Cloud Run and Neon
-                            PostgreSQL over async SQLAlchemy. Long-running AI work
-                            leaves the request path through Cloud Tasks and runs in
-                            a private Cloud Run worker.
+                            A Next.js workspace and WhatsApp Cloud API webhook feed
+                            the same FastAPI service and shared agent state. Long
+                            AI work leaves both request paths through Cloud Tasks,
+                            runs in a private Cloud Run worker and returns through
+                            either the web application or a durable outbound-message
+                            queue.
                         </p>
                     </div>
 
                     <div
                         className={styles.blueprintSheet}
                         role='img'
-                        aria-label='HymnDeck system architecture. A church team signs in and supplies source documents through a Next.js application. FastAPI verifies the user and returns quickly while long-running generation work continues through Cloud Tasks and a private Cloud Run worker. The worker uses Neon, Cloud Storage, OpenRouter and PowerPoint processing to create a downloadable PowerPoint deck.'
+                        aria-label='HymnDeck system architecture. A church team supplies lyrics, documents and design intent through the Next.js application or WhatsApp. FastAPI validates and persists the request before long-running generation continues through Cloud Tasks and a private Cloud Run worker. The worker uses Neon, Cloud Storage, OpenRouter, optional Pexels imagery and PowerPoint processing. The finished deck is available in the web editor or delivered through a durable WhatsApp outbox.'
                     >
                         <div className={styles.blueprintHeader} aria-hidden='true'>
                             <span>HymnDeck / system anatomy</span>
                             <span>HD-ARCH-04</span>
-                            <span>Rev. 03</span>
+                            <span>Rev. 04</span>
                         </div>
 
                         <div className={styles.blueprintCanvas}>
@@ -434,6 +487,10 @@ export default function HymnDeckCaseStudy() {
                                 <path className={styles.serviceWire} d='M 893 117 C 903 180 938 231 951 286' />
                                 <path className={styles.optionalWire} d='M 1033 176 C 1014 214 1001 252 985 287' />
                                 <path className={styles.serviceWire} d='M 505 604 C 521 493 520 320 532 222' />
+                                <path
+                                    className={styles.serviceWire}
+                                    d='M 744 630 C 852 662 1018 654 1086 594'
+                                />
                             </svg>
 
                             <ol className={styles.blueprintRoute}>
@@ -446,10 +503,10 @@ export default function HymnDeckCaseStudy() {
                                 </li>
                                 <li className={`${styles.blueprintStage} ${styles.stageWeb}`}>
                                     <span className={styles.stageNumber}>02</span>
-                                    <span className={styles.stageKind}>Control surface</span>
-                                    <strong>Next.js 16</strong>
-                                    <small>React 19 / TypeScript / Zustand</small>
-                                    <em>sign in + review visually</em>
+                                    <span className={styles.stageKind}>Control surfaces</span>
+                                    <strong>Web + WhatsApp</strong>
+                                    <small>Next.js workspace / Meta webhooks</small>
+                                    <em>sign in, message or review</em>
                                 </li>
                                 <li className={`${styles.blueprintStage} ${styles.stageApi}`}>
                                     <span className={styles.stageNumber}>03</span>
@@ -474,10 +531,10 @@ export default function HymnDeckCaseStudy() {
                                 </li>
                                 <li className={`${styles.blueprintStage} ${styles.stageDeck}`}>
                                     <span className={styles.stageNumber}>06</span>
-                                    <span className={styles.stageKind}>Output</span>
-                                    <strong>.pptx deck</strong>
-                                    <small>python-pptx / LibreOffice / Poppler</small>
-                                    <em>back in the familiar workflow</em>
+                                    <span className={styles.stageKind}>Delivery</span>
+                                    <strong>.pptx + preview</strong>
+                                    <small>web download / WhatsApp document</small>
+                                    <em>durable outbox + signed fallback</em>
                                 </li>
                             </ol>
 
@@ -505,12 +562,17 @@ export default function HymnDeckCaseStudy() {
                                 <div className={`${styles.systemNote} ${styles.noteAi}`}>
                                     <span>Model gateway</span>
                                     <strong>OpenRouter</strong>
-                                    <small>Gemini / MiniMax / configured models</small>
+                                    <small>Gemini formatter / GPT-5.6 Luna agent</small>
+                                </div>
+                                <div className={`${styles.systemNote} ${styles.noteWhatsApp}`}>
+                                    <span>Messaging</span>
+                                    <strong>WhatsApp Cloud API</strong>
+                                    <small>webhooks / media / delivery status</small>
                                 </div>
                                 <div className={`${styles.systemNote} ${styles.notePexels}`}>
-                                    <span>Optional</span>
+                                    <span>Optional imagery</span>
                                     <strong>Pexels</strong>
-                                    <small>stock imagery</small>
+                                    <small>licensed stock-image search</small>
                                 </div>
                                 <div className={`${styles.systemNote} ${styles.noteBilling}`}>
                                     <span>Commercial</span>
@@ -523,7 +585,7 @@ export default function HymnDeckCaseStudy() {
                                 long work leaves<br />the request path
                             </p>
                             <p className={styles.returnAnnotation} aria-hidden='true'>
-                                07 / poll status, preview, download
+                                07 / stream or message status, preview, deliver
                             </p>
                         </div>
 
@@ -552,9 +614,10 @@ export default function HymnDeckCaseStudy() {
                                 <h3>Backend and data</h3>
                                 <p>
                                     Python 3.14, FastAPI, Uvicorn, Pydantic,
-                                    SQLAlchemy 2 async, asyncpg, Alembic,
-                                    python-multipart, HTTP bearer authentication,
-                                    Neon PostgreSQL and in-memory SQLite tests.
+                                    SQLAlchemy 2 async, asyncpg, Alembic, channel
+                                    identities, agent sessions, a database-backed
+                                    delivery outbox, Neon PostgreSQL and in-memory
+                                    SQLite tests.
                                 </p>
                             </div>
                             <div>
@@ -563,8 +626,8 @@ export default function HymnDeckCaseStudy() {
                                     Public and private Cloud Run services, Cloud
                                     Tasks, Cloud Storage, IAM service accounts,
                                     Secret Manager, Firebase Auth and Admin SDK,
-                                    Google OAuth, Docker multi-stage builds, uv and
-                                    gcloud.
+                                    Google OAuth, Meta Graph and WhatsApp Cloud APIs,
+                                    Docker multi-stage builds, uv and gcloud.
                                 </p>
                             </div>
                             <div>
@@ -634,16 +697,28 @@ export default function HymnDeckCaseStudy() {
                                 distinct steps and users review ambiguous matches.
                             </p>
                             <p>
-                                I tested GLM 5, Kimi K2.5, Gemini 2.5 Flash,
-                                Gemini 3 Flash and MiniMax M3 against cost and
-                                latency. Gemini 3 Flash won the constrained
-                                formatter role; MiniMax M3 with thinking enabled
-                                won the agentic chatbot role. Tests cover tool
-                                schemas, invalid arguments, permissions, source
-                                requirements, wording preservation, provenance,
-                                confirmation, failures and observability redaction.
-                                A scored evaluation dataset remains the clearest
-                                testing gap.
+                                I compared GLM 5, Kimi K2.5, Gemini 2.5 Flash,
+                                Gemini 3 Flash and MiniMax M3 on representative
+                                HymnDeck tasks. That exposed a weakness in comparing
+                                models by token price and latency alone: less capable
+                                agents sometimes produced malformed tool calls or needed
+                                several attempts to complete one operation.
+                            </p>
+                            <p>
+                                I reduced the initial tool surface to a small set of core
+                                capabilities, allowing the agent to activate additional
+                                tool groups only when the workflow requires them. I then
+                                moved the web and WhatsApp agent to GPT-5.6 Luna. Its
+                                lower price and better first-pass tool reliability made
+                                it cheaper per completed task—not merely cheaper per
+                                token. Gemini 3 Flash remains the constrained formatter.
+                            </p>
+                            <p>
+                                Automated tests cover tool schemas, invalid arguments,
+                                permissions, source requirements, wording preservation,
+                                provenance, confirmation, failures and observability
+                                redaction. A scored model-evaluation dataset remains the
+                                clearest testing gap.
                             </p>
                         </div>
                     </article>
@@ -688,28 +763,35 @@ export default function HymnDeckCaseStudy() {
                             <p
                                 className={`${styles.challengeKicker} ${shared.embossedLabel} ${shared.tiltSoftRight}`}
                             >
-                                Durable work
+                                Conversational reliability
                             </p>
-                            <h3>Build background jobs that survive failure</h3>
+                            <h3>Make slow AI feel native inside messaging</h3>
                             <p className={styles.challengeLead}>
-                                AI generation is too slow and failure-prone to live
-                                inside one HTTP request, so it does not.
+                                A webhook can be retried, a model can time out and the
+                                user can send another message while both are happening.
+                                The conversation still has to make sense.
                             </p>
                             <p>
-                                The API enqueues a Cloud Task that makes an
-                                authenticated request to a private Cloud Run worker.
-                                Job state persists in PostgreSQL through queued,
-                                running, processing, saving, completed, failed and
-                                cancelled states. Work survives request termination,
-                                container restarts, model failures and partial
-                                processing.
+                                Signed Meta webhooks are verified and normalised into durable
+                                records, then Cloud Tasks carries long-running work
+                                to a private worker. Provider message IDs,
+                                task-identity checks and
+                                commit-visibility retries make retried webhook delivery safe.
+                                Persisted agent sessions preserve reply context, while newer
+                                requests can supersede stale runs. Typing indicators and bounded
+                                working-status messages make progress visible without pretending
+                                generation is instantaneous.
                             </p>
                             <p>
-                                Duplicate delivery is handled, abandoned jobs are
-                                identifiable, and the frontend streams agent
-                                activity so users see progress rather than a
-                                spinner. Model calls, tool calls and wall-clock
-                                duration are all bounded.
+                                Results leave through a database-backed delivery outbox with leases,
+                                retries and delivery receipts. The dispatcher respects WhatsApp’s
+                                customer-service window and can notify the user through a
+                                configured, approved template when direct delivery is blocked.
+                                Otherwise it waits for the next inbound message to reopen the
+                                window. A PowerPoint that is too large for direct media delivery
+                                falls back to a signed download. Model calls, tool calls
+                                and wall-clock duration are bounded so a stuck run can
+                                reach an honest terminal state.
                             </p>
                         </div>
                     </article>
@@ -725,19 +807,21 @@ export default function HymnDeckCaseStudy() {
                         <h2>Hold little. Invent nothing.</h2>
                         <p>
                             The model only formats material supplied by the user;
-                            it never fills lyrics from training data. Uploads are
-                            not retained. The generated deck structure persists
+                            it never fills lyrics from training data. Transient source
+                            files are normally removed
+                            from active storage after about 48 hours and message content after about
+                            seven days; operational records retain only what is needed to recover
+                            and audit delivery. The generated deck structure persists
                             for the life of the account because deleting somebody’s
-                            slides after 30 days would be hostile. The only output
-                            is a downloaded <code>.pptx</code>; HymnDeck publishes
-                            or shares nothing.
+                            slides after 30 days would be hostile.
                         </p>
                         <p>
-                            Customer content is scoped to the authenticated
-                            organisation, Drive imports are restricted, URLs are
+                            Customer content is scoped to the authenticated organisation. WhatsApp
+                            identities are connected through expiring, single-use tokens and
+                            relinking archives old conversational context before trust scope
+                            changes. Drive imports are restricted, URLs are
                             allowlisted, and verbose model traces are off by
                             default with unsafe values redacted during debugging.
-                            A takedown request would be straightforward to honour.
                         </p>
                     </div>
                     <div className={styles.operationCard}>
@@ -752,7 +836,8 @@ export default function HymnDeckCaseStudy() {
                             the worker private and reachable only through
                             authenticated Cloud Tasks. Ordered Alembic migrations
                             cover the initial schema, billing, multiple designs,
-                            background jobs, agent sessions, asset provenance and
+                            background jobs, agent sessions, asset provenance,
+                            channel identities, delivery state, export snapshots and
                             legacy data removal.
                         </p>
                         <p>
@@ -802,7 +887,9 @@ export default function HymnDeckCaseStudy() {
                             week. A workflow that took about an hour—and up to three
                             at the worst end—now takes minutes. The product has run
                             in production since April without manual intervention
-                            to keep it alive.
+                            to keep it alive. WhatsApp is now live as a second way
+                            into the same workflow; there is not yet enough usage to
+                            claim it changed adoption.
                         </p>
                         <p>
                             Billing was built, live and integrated, but nobody

@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 const sections = [
     ["problem", "Problem"],
     ["product", "Product"],
+    ["channels", "WhatsApp"],
     ["architecture", "Architecture"],
     ["engineering", "Engineering"],
     ["results", "Results"],

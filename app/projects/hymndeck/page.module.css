@@ -388,6 +388,81 @@ main.page {
     margin-bottom: 0;
 }
 
+.channelSection {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.75fr);
+    gap: clamp(2.5rem, 7vw, 7rem);
+    align-items: center;
+    width: min(calc(100% - 2rem), 74rem);
+    margin: clamp(6rem, 14vw, 11rem) auto;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    border: 1px solid var(--hairline);
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, #25d366 7%, var(--paper)),
+        var(--paper) 48%
+    );
+}
+
+.channelCopy h2 {
+    max-width: 12ch;
+    margin: 3rem 0 1.5rem;
+    font-family: var(--font-nacelle-black);
+    font-size: clamp(2.5rem, 5.5vw, 5rem);
+    letter-spacing: -0.055em;
+    line-height: 0.92;
+    text-wrap: balance;
+}
+
+.channelCopy > p:not(:first-child) {
+    max-width: 42rem;
+    color: color-mix(in srgb, var(--ink) 88%, var(--paper));
+    font-size: 1rem;
+    line-height: 1.72;
+}
+
+.channelCopy .channelLead {
+    color: var(--ink);
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.channelCopy .channelCaveat {
+    margin-top: 1.75rem;
+    padding: 1rem 0 0 1.2rem;
+    border-top: 1px solid var(--hairline);
+    border-left: 0.24rem solid #25d366;
+    color: var(--muted);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+.channelSection > .channelMedia {
+    width: min(100%, 20rem);
+    margin: 0;
+    justify-self: center;
+}
+
+.channelMedia > div {
+    box-sizing: border-box;
+    padding: 0.45rem;
+    border: 0;
+    border-radius: 2.25rem;
+    background: #0a0a0a;
+    box-shadow:
+        0 1.5rem 4rem rgba(19, 19, 18, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.channelMedia video {
+    width: 100%;
+    max-height: none;
+    border-radius: 1.85rem;
+    background: #fff;
+}
+
 .workflow {
     display: grid;
     grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
@@ -838,11 +913,18 @@ main.page {
     transform: rotate(-0.8deg);
 }
 
+.noteWhatsApp {
+    top: 84%;
+    left: 56%;
+    width: 13%;
+    transform: rotate(1.2deg);
+}
+
 .notePexels {
     top: 16%;
     right: 0;
     width: 10%;
-    transform: rotate(1.2deg);
+    transform: rotate(0.7deg);
 }
 
 .noteBilling {
@@ -1206,6 +1288,15 @@ main.page {
         grid-template-columns: 1fr 1fr;
     }
 
+    .channelSection {
+        grid-template-columns: 1fr;
+    }
+
+    .channelSection > .channelMedia {
+        width: min(100%, 32rem);
+        margin-inline: auto;
+    }
+
     .workflow > span {
         display: none;
     }
@@ -1313,6 +1404,7 @@ main.page {
     }
 
     .systemNote,
+    .noteWhatsApp,
     .notePexels {
         position: relative;
         top: auto;
