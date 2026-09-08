@@ -24,8 +24,8 @@ const Contact = () => {
 
             <div className='absolute top-5 right-7 lg:top-7 lg:right-10 z-50'>
                 <LinkWrapper>
-                    <DirectionalLink href='/projects' direction='left'>
-                        My Projects →
+                    <DirectionalLink href='/case-studies' direction='left'>
+                        Case Studies →
                     </DirectionalLink>
                 </LinkWrapper>
             </div>
@@ -84,11 +84,18 @@ const Contact = () => {
                             <div className='space-y-4 font-mono text-sm lg:text-base'>
                                 <div className='flex flex-col gap-1'>
                                     <span className='text-gray-500 uppercase tracking-wider text-xs font-bold'>
-                                        Organization
+                                        Availability
                                     </span>
                                     <span className='font-bold'>
-                                        Open to Work
+                                        Freelance, contract or permanent
                                     </span>
+                                    <DirectionalLink
+                                        href='/for-agencies'
+                                        className='text-sm underline underline-offset-4 decoration-gray-400 hover:decoration-black w-fit'
+                                        direction='up'
+                                    >
+                                        Working with agencies →
+                                    </DirectionalLink>
                                 </div>
 
                                 <div className='grid grid-cols-1 gap-3 mt-6'>

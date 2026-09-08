@@ -63,7 +63,7 @@ const About = () => {
                         graduate from Queen Mary University of London. Most
                         recently, I designed, built, deployed and supported{" "}
                         <DirectionalLink
-                            href='/projects/hymndeck'
+                            href='/case-studies/hymndeck'
                             className='font-bold underline underline-offset-4'
                         >
                             HymnDeck
@@ -134,10 +134,8 @@ const About = () => {
                     </p>
 
                     <p className={styles.paragraph}>
-                        I&apos;m early in my career and haven&apos;t yet worked
-                        inside another company&apos;s engineering team. Solo work
-                        taught me ownership and speed, but also where
-                        collaboration pays: reviewing decisions early,
+                        Solo work has taught me ownership and speed, but also
+                        where collaboration pays: reviewing decisions early,
                         challenging scope and going deeper instead of constantly
                         switching disciplines. I work best with people who trust
                         one another enough to disagree openly and change their
@@ -173,7 +171,16 @@ const About = () => {
                         </DirectionalLink>{" "}
                         if you&apos;re hiring, or if you need someone who can
                         take an AI or automation idea through product, build,
-                        deployment and the messy part afterwards.
+                        deployment and the messy part afterwards. If you run an
+                        agency and occasionally have more delivery work than
+                        hands, here&apos;s{" "}
+                        <DirectionalLink
+                            href='/for-agencies'
+                            className='font-bold underline underline-offset-4'
+                        >
+                            how I work with agencies
+                        </DirectionalLink>
+                        .
                     </p>
                 </div>
             </div>

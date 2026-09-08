@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         template: "%s | Juan Miguel Sanchez",
     },
     description:
-        "Personal portfolio of Juan Miguel Sanchez — Full-Stack Product Engineer specializing in AI applications and design engineering.",
+        "Juan Miguel Sanchez builds full stack web apps with Next.js, TypeScript, Python and Postgres, including the AI workflows inside them. Available for freelance and contract work in London or remote.",
 };
 
 export default function RootLayout({

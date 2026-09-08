@@ -46,10 +46,10 @@ const Home = () => {
                 </LinkWrapper>
                 <LinkWrapper>
                     <DirectionalLink
-                        href='/projects/hymndeck'
+                        href='/case-studies/hymndeck'
                         className='font-lora font-medium'
                     >
-                        Projects
+                        Case Studies
                     </DirectionalLink>
                 </LinkWrapper>
             </div>
@@ -58,10 +58,25 @@ const Home = () => {
                     Juan Miguel Sanchez
                 </p>
                 <h1 className='text-5xl sm:text-6xl lg:text-7xl text-center font-nacelle-black'>
-                    I build full stack software
+                    I build full stack web apps
                     <br />
-                    and deploy AI solutions
+                    and the AI inside it
                 </h1>
+                <div className='flex flex-col items-center gap-2 text-center font-lora'>
+                    <p className='text-base sm:text-lg font-medium tracking-wide'>
+                        Next.js · FastAPI 
+                        <span className='hidden sm:inline'> · TypeScript · Python </span>
+                        {' '}· PostgreSQL · GCP
+                    </p>
+                    <DirectionalLink
+                        href='/for-agencies'
+                        direction='down'
+                        className='relative inline-block max-w-full text-sm sm:text-base text-amber-100/90 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 focus-visible:after:scale-x-100'
+                    >
+                        Available for freelance and contract work · London /
+                        remote
+                    </DirectionalLink>
+                </div>
             </div>
             <div className='relative z-10 flex justify-between text-xl md:text-2xl'>
                 <LinkWrapper>
@@ -69,7 +84,7 @@ const Home = () => {
                         href='/contact'
                         className='font-lora font-medium'
                     >
-                        Contact Me
+                        Work With Me
                     </DirectionalLink>
                 </LinkWrapper>
                 <LinkWrapper>

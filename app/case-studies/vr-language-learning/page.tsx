@@ -123,7 +123,7 @@ export default function VrLanguageLearningCaseStudy() {
             </article>
 
             <ProjectPager
-                nextHref='/projects/hymndeck'
+                nextHref='/case-studies/hymndeck'
                 nextTitle='HymnDeck'
             />
         </main>

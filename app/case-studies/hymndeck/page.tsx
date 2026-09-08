@@ -973,7 +973,7 @@ export default function HymnDeckCaseStudy() {
             </article>
 
             <ProjectPager
-                nextHref='/projects/house-md-chatbot'
+                nextHref='/case-studies/house-md-chatbot'
                 nextTitle='House MD Chatbot'
             />
         </main>

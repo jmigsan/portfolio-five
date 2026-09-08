@@ -9,7 +9,7 @@ import styles from "./project-navigation.module.css";
 
 const projects = [
     {
-        href: "/projects/hymndeck",
+        href: "/case-studies/hymndeck",
         shortLabel: "HymnDeck",
         label: "HymnDeck case study",
         accent: "#d4a017",
@@ -17,7 +17,7 @@ const projects = [
         posterSrc: "/hymndeck-demo-small-poster.webp",
     },
     {
-        href: "/projects/house-md-chatbot",
+        href: "/case-studies/house-md-chatbot",
         shortLabel: "House MD",
         label: "House MD Chatbot case study",
         accent: "#173b6c",
@@ -25,7 +25,7 @@ const projects = [
         posterSrc: "/house-demo-small-poster.webp",
     },
     {
-        href: "/projects/powerpoint-automation",
+        href: "/case-studies/powerpoint-automation",
         shortLabel: "PPT Tool",
         label: "PowerPoint Automation Tool case study",
         accent: "#159a9c",
@@ -33,7 +33,7 @@ const projects = [
         posterSrc: "/ppt-demo-small-poster.webp",
     },
     {
-        href: "/projects/vr-language-learning",
+        href: "/case-studies/vr-language-learning",
         shortLabel: "VR Language",
         label: "VR Language Learning App case study",
         accent: "#7250a8",

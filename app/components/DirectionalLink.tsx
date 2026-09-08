@@ -15,10 +15,10 @@ type DirectionalLinkProps = Omit<
 };
 
 const projectPaths = [
-    "/projects/hymndeck",
-    "/projects/house-md-chatbot",
-    "/projects/powerpoint-automation",
-    "/projects/vr-language-learning",
+    "/case-studies/hymndeck",
+    "/case-studies/house-md-chatbot",
+    "/case-studies/powerpoint-automation",
+    "/case-studies/vr-language-learning",
 ] as const;
 
 const getRouteCoordinates = (pathname: string) => {
@@ -28,6 +28,10 @@ const getRouteCoordinates = (pathname: string) => {
 
     if (pathname === "/contact") {
         return { x: 0, y: 1 };
+    }
+
+    if (pathname === "/for-agencies") {
+        return { x: 0, y: -1 };
     }
 
     const projectIndex = projectPaths.findIndex((path) => path === pathname);

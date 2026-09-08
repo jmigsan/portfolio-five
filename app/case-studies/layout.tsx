@@ -3,12 +3,12 @@ import ProjectNavigation from "./_components/ProjectNavigation";
 import styles from "./projects.module.css";
 
 export const metadata: Metadata = {
-    title: "Projects",
+    title: "Case Studies",
     description:
         "Product engineering case studies by Juan Miguel Sanchez, from problem discovery to production deployment.",
 };
 
-export default function ProjectsLayout({
+export default function CaseStudiesLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;

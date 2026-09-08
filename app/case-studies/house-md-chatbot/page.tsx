@@ -154,7 +154,7 @@ export default function HouseMdChatbotCaseStudy() {
             </article>
 
             <ProjectPager
-                nextHref='/projects/powerpoint-automation'
+                nextHref='/case-studies/powerpoint-automation'
                 nextTitle='PowerPoint Automation'
             />
         </main>

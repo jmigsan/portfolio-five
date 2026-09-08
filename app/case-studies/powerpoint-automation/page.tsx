@@ -133,7 +133,7 @@ export default function PowerPointAutomationCaseStudy() {
             </article>
 
             <ProjectPager
-                nextHref='/projects/vr-language-learning'
+                nextHref='/case-studies/vr-language-learning'
                 nextTitle='VR Language Learning'
             />
         </main>

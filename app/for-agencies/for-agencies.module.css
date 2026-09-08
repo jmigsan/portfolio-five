@@ -1,0 +1,39 @@
+.heading1 {
+    font-size: 3rem;
+    font-family: var(--font-nacelle-black);
+    line-height: 1.1;
+    margin-top: 5px;
+}
+
+.heading2 {
+    font-size: 1.5rem;
+    font-family: var(--font-nacelle-black);
+    margin-top: 32px;
+}
+
+.paragraph {
+    margin-top: 10px;
+}
+
+.list {
+    margin-top: 10px;
+    padding-left: 1.1rem;
+    list-style: disc;
+}
+
+.list li {
+    margin-top: 6px;
+}
+
+.callout {
+    margin-top: 32px;
+    padding: 20px 24px;
+    border-left: 4px solid currentColor;
+    background: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+.stack {
+    margin-top: 32px;
+    font-size: 0.95rem;
+    opacity: 0.75;
+}
