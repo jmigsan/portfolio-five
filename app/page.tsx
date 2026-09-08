@@ -1,22 +1,10 @@
-"use client";
-
-import { useState } from "react";
-import dynamic from "next/dynamic";
 import DirectionalLink from "./components/DirectionalLink";
 import LinkWrapper from "./components/LinkWrapper";
-
-const AttributionModal = dynamic(() => import("./components/AttributionModal"), {
-    ssr: false,
-});
+import AttributionTrigger from "./components/AttributionTrigger";
 
 const Home = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
-
     return (
-        <div className='isolate flex-1 flex flex-col p-12 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
+        <main className='isolate flex-1 flex flex-col p-12 sm:p-24 justify-between relative overflow-hidden text-amber-200'>
             <div
                 aria-hidden='true'
                 className='pointer-events-none fixed inset-0 z-0 bg-[#849dbd]'
@@ -87,17 +75,9 @@ const Home = () => {
                         Work With Me
                     </DirectionalLink>
                 </LinkWrapper>
-                <LinkWrapper>
-                    <button
-                        onClick={openModal}
-                        className='text-xl sm:text-2xl cursor-pointer font-lora font-medium'
-                    >
-                        Attribution
-                    </button>
-                </LinkWrapper>
+                <AttributionTrigger />
             </div>
-            <AttributionModal isOpen={isModalOpen} onClose={closeModal} />
-        </div>
+        </main>
     );
 };
 

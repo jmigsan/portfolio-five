@@ -5,13 +5,15 @@ import "./globals.css";
 import RouteViewTransition from "./components/RouteViewTransition";
 
 const nacelleBlack = localFont({
-    src: "./assets/Nacelle-Black.otf",
+    src: "./assets/Nacelle-Black.woff2",
     variable: "--font-nacelle-black",
+    display: "swap",
 });
 
 const lora = Lora({
     subsets: ["latin"],
     variable: "--font-lora",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
