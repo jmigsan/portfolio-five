@@ -60,7 +60,7 @@ const Home = () => {
                 <h1 className='text-5xl sm:text-6xl lg:text-7xl text-center font-nacelle-black'>
                     I build full stack web apps
                     <br />
-                    and the AI inside it
+                    and deploy AI solutions
                 </h1>
                 <div className='flex flex-col items-center gap-2 text-center font-lora'>
                     <p className='text-base sm:text-lg font-medium tracking-wide'>
