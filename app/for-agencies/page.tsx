@@ -16,12 +16,12 @@ const ForAgencies = () => {
         <div className='flex-col font-lora p-10 overflow-hidden'>
             <div className='flex justify-between -mt-4 mb-8 md:mb-10'>
                 <LinkWrapper>
+                    <DirectionalLink href='/'>Back to Home ↓</DirectionalLink>
+                </LinkWrapper>
+                <LinkWrapper>
                     <DirectionalLink href='/contact' direction='down'>
                         Work With Me ↑
                     </DirectionalLink>
-                </LinkWrapper>
-                <LinkWrapper>
-                    <DirectionalLink href='/'>Back to Home ↓</DirectionalLink>
                 </LinkWrapper>
             </div>
 
