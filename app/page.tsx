@@ -57,7 +57,7 @@ const Home = () => {
                 <p className='text-2xl sm:text-3xl font-lora font-medium'>
                     Juan Miguel Sanchez
                 </p>
-                <h1 className='text-5xl sm:text-6xl lg:text-7xl text-center font-nacelle-black'>
+                <h1 className='text-4xl sm:text-6xl lg:text-7xl text-center font-nacelle-black'>
                     I build full stack web apps
                     <br />
                     and deploy AI solutions
