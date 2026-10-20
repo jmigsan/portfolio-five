@@ -58,7 +58,7 @@ const Home = () => {
                     </p>
                     <DirectionalLink
                         href='/contact'
-                        direction='down'
+                        direction='up'
                         className='relative inline-block max-w-full text-sm sm:text-base text-amber-100/90 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 focus-visible:after:scale-x-100'
                     >
                         Open to full-time roles, freelance and contract work ·
