@@ -355,9 +355,10 @@ export default function HymnDeckCaseStudy() {
                             matters; messaging makes the common path easier to start and delegate.
                         </p>
                         <p className={styles.channelCaveat}>
-                            The integration is live, but it is too early to claim it solved
-                            distribution. It turns the lesson from the first launch into a testable
-                            product hypothesis.
+                            It hasn’t solved distribution. It did change how the remaining
+                            church works: since WhatsApp launched they’ve gone from using
+                            HymnDeck most weeks to every week, and a second team member now
+                            makes the decks, not just the person who started with it.
                         </p>
                     </div>
 
@@ -887,9 +888,11 @@ export default function HymnDeckCaseStudy() {
                             week. A workflow that took about an hour—and up to three
                             at the worst end—now takes minutes. The product has run
                             in production since April without manual intervention
-                            to keep it alive. WhatsApp is now live as a second way
-                            into the same workflow; there is not yet enough usage to
-                            claim it changed adoption.
+                            to keep it alive. Since WhatsApp launched, that church
+                            has moved from most weeks to every week, and a second
+                            person there now makes the decks. It hasn’t brought in
+                            new churches, but it made the work easier to hand off
+                            inside the one that stayed.
                         </p>
                         <p>
                             Billing was built, live and integrated, but nobody
